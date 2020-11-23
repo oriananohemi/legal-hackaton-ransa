@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: univia;
+  src: url("./assets/fonts/UniviaPro-Regular.otf");
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: univia, Verdana, Geneva, Tahoma, sans-serif;
+}
