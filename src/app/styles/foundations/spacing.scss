@@ -1,0 +1,5 @@
+$spacingUnit: 10px;
+
+@function getSpacing($times: 1) {
+  @return $spacingUnit * $times;
+}
