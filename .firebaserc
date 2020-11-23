@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ransa-d8b38": {
+      "hosting": {
+        "ransa": [
+          "ransa-d8b38"
+        ]
+      }
+    }
+  }
+}
