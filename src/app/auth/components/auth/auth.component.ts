@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl,Validators,FormGroup, FormBuilder } from '@angular/forms';
+import {AuthService} from '../../../core/services/auth/auth.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -7,24 +9,61 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
+  // password: FormControl;
+  // email: FormControl;
+  form: FormGroup;
 
-  emailField: FormControl;
   hide = true;
 
-  constructor() { 
-    this.emailField = new FormControl('', [Validators.required, Validators.email]);
+  constructor(
+    private formBuilder: FormBuilder,
+    private authService: AuthService,
+    private router: Router,
+  ) {
+    this.buildForm();
   }
-
+  
   ngOnInit(): void {
+  }
+     
+
+
+
+  login(event: Event) {
+    event.preventDefault();
+    if (this.form.valid) {
+      const value = this.form.value;
+      this.authService
+        .login(value.email, value.password)
+        .then(() => {
+            this.router.navigate(['/']);
+        })
+        .catch((err) => {
+          console.error(err)
+        });
+    }
   }
 
   
-  getErrorMessage() {
-    if (this.emailField.hasError('required')) {
-      return 'You must enter a value';
-    }
+  // getErrorMessage() {
+  //   if (this.form.hasError('required')) {
+  //     return 'You must enter a value';
+  //   }
 
-    return this.emailField.hasError('email') ? 'Not a valid email' : '';
+  //   return this.form.hasError('email') ? 'Not a valid email' : '';
+  // }
+
+
+//   this.form = new FormGroup({
+//     this.emailField = new FormControl('', [Validators.required, Validators.email]),
+//     this.passwordField = new FormControl('', [Validators.required])
+//  });
+
+  private buildForm() {
+    this.form = this.formBuilder.group({
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+    });
   }
 
 }

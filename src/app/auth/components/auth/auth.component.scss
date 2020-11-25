@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    &_img{
+        height: 100vh;
+        img{
+            height: 100%;
+        }
+    }
+    &_form{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &--logo{
+            width: 350px;
+            img{
+                width: 100%;
+            }
+        }
+        &--group{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            input{
+                width: 100%;
+            }
+        }
+    }
+}
