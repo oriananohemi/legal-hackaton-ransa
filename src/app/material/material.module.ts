@@ -8,7 +8,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [],
   imports: [
@@ -20,7 +20,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatButtonModule,
     MatTabsModule,
     MatBadgeModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSnackBarModule
   ],
   exports: [
     MatFormFieldModule,
@@ -30,7 +31,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatButtonModule,
     MatTabsModule,
     MatBadgeModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }
