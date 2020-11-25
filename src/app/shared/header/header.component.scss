@@ -3,6 +3,7 @@
 .header {
   border-bottom: 1px solid $highlight-color;
   padding: 10px;
+  height: 50px;
   li {
     margin-left: 10px;
   }
@@ -14,4 +15,8 @@
 
 .header__brand {
   width: 150px;
+}
+
+.icon {
+  width: 20px;
 }
