@@ -8,7 +8,6 @@ import { LayoutComponent } from './layout/layout.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './login/components/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +20,6 @@ import { LoginComponent } from './login/components/login/login.component';
     CoreModule,
     ReactiveFormsModule,
     SharedModule,
-    LoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

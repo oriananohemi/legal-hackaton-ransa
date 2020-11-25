@@ -1,0 +1,26 @@
+<div class="container">
+  <figure class="container_img">
+      <img class="container_img--content" src="../../../../assets/images/jefeOperaciones.jpeg" alt="">
+  </figure>
+  <div class="container_form">
+      <figure class="logo">
+          <img src="../../assets/images/ransa-logo.png">
+      </figure>
+      <form [formControl]="emailField" [formGroup]="emailField">
+          <mat-form-field appearance="fill">
+              <mat-label>Correo</mat-label>
+              <input matInput placeholder="pat@example.com" [formControl]="emailField" required>
+              <mat-error *ngIf="emailField.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+              <mat-label>Contraseña</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+          </mat-form-field>
+          <button type="submit" mat-flat-button color="primary">Ingresar</button>
+      </form>
+  </div>
+</div>
