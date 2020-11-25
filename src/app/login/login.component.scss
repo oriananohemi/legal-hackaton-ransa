@@ -1,0 +1,44 @@
+// @import "../../../styles.scss";
+
+.container{
+    // background-color: $yellow-color;
+    display: flex;
+    &__img{
+        height: 100vh;
+        &--content{
+            height: 100%;
+        }
+    };
+    &__form{
+        width: 100%;
+        // @extend %centerWithFlex;
+        &--content{
+            // @extend %centerWithFlex;
+            margin-bottom: 15px;
+        }
+    }
+    .title{
+        // font-family: $cinzel-font;
+        font-size: 1.8rem;
+    }
+
+}
+
+label{
+    width: 50%;
+    input{
+        width: 100%;
+        max-width: 325px;
+        // @extend %inputStyle;
+    }
+    span{
+        // font-family: $roboto-font;
+        font-size: 1.6rem;
+        // color: $light-color;
+    }
+}
+
+// button{
+//     @extend %button;
+//     background: $red-color;
+// }
