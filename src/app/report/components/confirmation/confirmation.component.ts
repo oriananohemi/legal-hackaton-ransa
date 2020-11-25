@@ -14,6 +14,6 @@ export class ConfirmationComponent implements OnInit {
   }
 
   generatePdf() {
-    this.reportService.generatePdf('print');
+    this.reportService.generatePdf('download');
   }
 }
