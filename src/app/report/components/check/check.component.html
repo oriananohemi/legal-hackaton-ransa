@@ -1,0 +1,8 @@
+<h2>¿Que tipo de incidencia deseas reportar?</h2>
+
+<mat-form-field appearance="fill">
+  <mat-label>Selecciona una opcion</mat-label>
+  <mat-select [(value)]="selected" (valueChange)="getQuestionsFromIncidence(selected)">
+    <mat-option *ngFor="let incidence of incidences" [value]="incidence">{{ INCIDENCES[incidence] }}</mat-option>
+  </mat-select>
+</mat-form-field>

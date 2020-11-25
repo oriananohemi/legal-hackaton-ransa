@@ -5,9 +5,10 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
 import { ReportRoutingModule } from './report-routing.module'
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module';
+import { CheckComponent } from './components/check/check.component';
 
 @NgModule({
-  declarations: [LayoutComponent, ConfirmationComponent],
+  declarations: [LayoutComponent, ConfirmationComponent, CheckComponent],
   imports: [
     CommonModule,
     ReportRoutingModule,

@@ -1,5 +1,11 @@
 @import "../../../../styles.scss";
 
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+}
+
 .main {
   background-color: $gray-color;
 }
