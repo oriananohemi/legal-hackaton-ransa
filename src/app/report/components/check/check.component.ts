@@ -1,25 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CheckService } from 'src/app/core/services/check/check.service';
 import { incidences } from '../../../core/definitions/report.model';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
+import { message } from 'src/app/core/services/check/check.constant';
 
 @Component({
   selector: 'app-check',
   templateUrl: './check.component.html',
   styleUrls: ['./check.component.scss']
 })
-export class CheckComponent implements OnInit {
-    selected: string;
+export class CheckComponent {
+    currentQuestion: number = 0;
+    show = false;
+    questions: string[];
     INCIDENCES = incidences;
     incidences = Object.keys(incidences);
 
-    constructor(private checkService: CheckService) { }
+    horizontalPosition: MatSnackBarHorizontalPosition = 'start';
+    verticalPosition: MatSnackBarVerticalPosition = 'top';
+
+    constructor(private checkService: CheckService, private _snackBar: MatSnackBar) { }
 
     getQuestionsFromIncidence(selected) {
-      console.log(selected)
-      // this.checkService.getQuestionsFromIncidence(this.selected)
+      this.questions = this.checkService.getQuestionsFromIncidence(selected);
+      this.currentQuestion = 0;
+      this.show = true;
     }
 
-  ngOnInit(): void {
-  }
+    getNextQuestion(value: boolean, i: number) {
+      if (value) {
+        this.currentQuestion = i + 1;
+      } else {
+        this.currentQuestion = i;
+        this._snackBar.open(message, 'End now', {
+          duration: 3000,
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition,
+        });
+      }
+    }
 
 }

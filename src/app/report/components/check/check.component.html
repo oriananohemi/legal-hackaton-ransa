@@ -2,7 +2,22 @@
 
 <mat-form-field appearance="fill">
   <mat-label>Selecciona una opcion</mat-label>
-  <mat-select [(value)]="selected" (valueChange)="getQuestionsFromIncidence(selected)">
+  <mat-select (valueChange)="getQuestionsFromIncidence($event)">
     <mat-option *ngFor="let incidence of incidences" [value]="incidence">{{ INCIDENCES[incidence] }}</mat-option>
   </mat-select>
 </mat-form-field>
+{{ currentQuestion | json}}
+<section *ngIf="show === true">
+  <ng-container *ngFor="let question of questions; let i = index">
+    <ng-container *ngIf="i <= currentQuestion">
+      <h2>{{ question }}</h2>
+      <mat-form-field appearance="fill">
+        <mat-label>Selecciona una opcion</mat-label>
+        <mat-select value="" (valueChange)="getNextQuestion($event, i)">
+          <mat-option [value]="true">si</mat-option>
+          <mat-option [value]="false">no</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </ng-container>
+  </ng-container>
+</section>

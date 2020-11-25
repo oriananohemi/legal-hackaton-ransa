@@ -7,7 +7,7 @@ export const incidences = [
     ]
   },
   {
-    typeOfIncident: 'trabajo mal realizado',
+    typeOfIncident: 'trabajo',
     questions: [
       'La actividad forma parte de las funciones del puesto',
       'Se capacito en el trabajo mal realizado al colaborador',
@@ -15,3 +15,5 @@ export const incidences = [
     ]
   }
 ];
+
+export const message = 'Recuerda que sin la acreditación de la infracción, no se puede sancionar. Continúa el proceso y tu gestor de GH te contactará.'
