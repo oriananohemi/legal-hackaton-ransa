@@ -1,11 +1,13 @@
 <div class="container">
   <h1 class="subtitle">Genera tu reporte de incidencias</h1>
 
-  <mat-tab-group color="accent" backgroundColor="primary">
+  <mat-tab-group [selectedIndex]="currentTab" color="accent" backgroundColor="primary">
     <mat-tab label="1 - Identificacion">
-      <app-check></app-check>
+      <app-check (eventEmit)="changeTab()"></app-check>
     </mat-tab>
-    <mat-tab label="2 - Generacion de reporte"> </mat-tab>
+    <mat-tab label="2 - Generacion de reporte">
+      <app-generate-report></app-generate-report>
+    </mat-tab>
     <mat-tab label="3 - Confirmacion">
       <app-confirmation></app-confirmation>
     </mat-tab>

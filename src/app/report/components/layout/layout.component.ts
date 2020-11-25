@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
-
-  constructor() { }
+  currentTab = 0;
+  constructor(private readonly cd: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+  }
+
+  changeTab() {
+    this.currentTab++;
+    this.cd.detectChanges()
   }
 
 }

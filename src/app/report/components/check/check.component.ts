@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CheckService } from 'src/app/core/services/check/check.service';
 import { incidences } from '../../../core/definitions/report.model';
 import {
@@ -14,6 +14,8 @@ import { message } from 'src/app/core/services/check/check.constant';
   styleUrls: ['./check.component.scss']
 })
 export class CheckComponent {
+  @Output() eventEmit = new EventEmitter<void>();
+
     currentQuestion: number = 0;
     show = false;
     questions: string[];
@@ -32,6 +34,9 @@ export class CheckComponent {
     }
 
     getNextQuestion(value: boolean, i: number) {
+      if (i === this.questions.length - 1) {
+        this.eventEmit.emit();
+      }
       if (value) {
         this.currentQuestion = i + 1;
       } else {
