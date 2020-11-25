@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "ransa"
+  "defaultProject": "ransa",
+  "cli": {
+    "analytics": "1b19ab0e-5d97-4ed9-9e60-090de6453306"
+  }
 }
