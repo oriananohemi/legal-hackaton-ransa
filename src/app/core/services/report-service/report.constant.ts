@@ -1,5 +1,6 @@
 import { image } from './brand-image.constant';
 import { map } from 'rxjs/operators';
+import { element } from 'protractor';
 
 export const info = (report) => {
   return ({
@@ -50,13 +51,13 @@ export const info = (report) => {
 
           - Personal involucrado: ${report.trabajador}
           - Fecha y hora de ocurrencia del evento: xxx
-          - Fecha y hora de detección del evento: ${report.fecha}
+          - Fecha y hora de detección del evento: ${report.fecha.toLocaleString()}
           - Lugar del evento: ${report.lugar}
           - Descripción del evento: ${report.relato}
 
           Se ha identificado como causas probables las siguientes:
 
-                  ${report}
+                  ${report.causas.map((element) => `-${element}` )}
 
           Se emite el presente informe para los fines del caso:
           Atentamente,

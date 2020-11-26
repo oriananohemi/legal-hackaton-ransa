@@ -61,7 +61,7 @@
 </mat-form-field>
 <mat-divider></mat-divider>
 <button type="button" mat-raised-button (click)="fileInput.click()" [style.width.px]=300>Choose File</button>
-<input hidden (change)="onFileSelected()" #fileInput type="file" id="file" formControlName="evidencia">
+<input hidden (change)="onFileSelected($event)" #fileInput type="file" id="file" formControlName="evidencia">
 <mat-divider></mat-divider>
 <h3>Describa los medios probatorios que se adjuntan</h3>
 <mat-form-field class="example-full-width" [style.width.px]=300>
