@@ -10,6 +10,8 @@ import Swal from 'sweetalert2';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
+  logo = 'assets/images/ransa-logo.png';
+  background = 'assets/images/jefeOperaciones.jpeg';
   // password: FormControl;
   // email: FormControl;
   form: FormGroup;
