@@ -9,13 +9,10 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ViewTableComponent } from './view-table/view-table.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    ViewTableComponent,
   ],
   imports: [
     BrowserModule,

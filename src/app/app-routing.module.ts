@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
-import { ViewTableComponent } from './view-table/view-table.component';
 
 const routes: Routes = [
 {
@@ -14,7 +13,7 @@ const routes: Routes = [
     },
     {
       path: 'main',
-      component: ViewTableComponent
+      loadChildren: () => import('./view-table/view-table.module').then(m => m.ViewTableModule),
     }
   ]
 },
