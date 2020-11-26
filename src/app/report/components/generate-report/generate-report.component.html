@@ -1,35 +1,38 @@
-<form>
+<form [formGroup]="report">
+  <h3>Reportante</h3>
   <mat-form-field class="example-full-width">
     <mat-label>Reportante</mat-label>
-    <input matInput placeholder="Alexa Rogue">
+    <input matInput placeholder="Alexa Rogue" formControlName="reportante">
   </mat-form-field>
   <mat-divider></mat-divider>
+  <h3>Involucrado</h3>
   <mat-form-field class="example-full-width">
     <mat-label>Involucrado</mat-label>
-    <input matInput placeholder="Trabajador 1">
+    <input matInput placeholder="Trabajador 1" formControlName="trabajador">
   </mat-form-field>
   <mat-divider></mat-divider>
+  <h3>Lugar de los hechos</h3>
   <mat-form-field class="example-full-width">
     <mat-label>Lugar de los hechos</mat-label>
-    <input matInput placeholder="Sede Lima">
+    <input matInput placeholder="Sede Lima" formControlName="lugar">
   </mat-form-field>
   <mat-divider></mat-divider>
   <!-- <mat-form-field color="accent" appearance="fill">
     <mat-label>Inherited calendar color</mat-label>
-    <input matInput [matDatepicker]="picker1">
+    <input matInput [matDatepicker]="picker1" formControlName="fecha>
     <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
     <mat-datepicker #picker1></mat-datepicker>
   </mat-form-field> -->
   <h3>Si los hechos involucraron testigos identíficalos y asegura su declaración</h3>
   <mat-form-field class="example-full-width">
     <mat-label>Ingrese el nombre y apellido de los testigos</mat-label>
-    <input matInput placeholder="Testigo 1 , Testigo 2">
+    <input matInput placeholder="Testigo 1 , Testigo 2" formControlName="testigos">
 </mat-form-field>
 <mat-divider></mat-divider>
 <h3>Si los hechos involucraron equipos y/o herramientas ¿Se encontraban en buenas condiciones de operatividad y con mantenimientos al día?</h3>
 <mat-form-field appearance="fill">
   <mat-label>Seleccione</mat-label>
-  <mat-select>
+  <mat-select formControlName="estado">
     <mat-option value="option">Seleccione</mat-option>
     <mat-option [value]=true>si</mat-option>
     <mat-option [value]=false>no</mat-option>
@@ -39,14 +42,28 @@
 <h3>Relata brevemente lo sucedido</h3>
 <mat-form-field appearance="fill">
   <mat-label>Me encontraba con el colaborador.....</mat-label>
-  <textarea matInput></textarea>
+  <textarea matInput formControlName="relato"></textarea>
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <h3>Si conversaste con el colaborador describa a qué acuerdo se llegó y adjunte carta de compromiso y/o 
+    declaración jurada simple en la evidencia</h3>
+  <mat-form-field class="example-full-width">
+    <mat-label>Describe si llegaste a un acuerdo</mat-label>
+    <input matInput placeholder="Acuerdo" formControlName="testigos">
 </mat-form-field>
 <mat-divider></mat-divider>
 <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
-<input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+<input hidden (change)="onFileSelected()" #fileInput type="file" id="file" formControlName="evidencia">
+<mat-divider></mat-divider>
+<h3>Describa los medios probatorios que se adjuntan</h3>
+<mat-form-field class="example-full-width">
+  <mat-label>Describe si llegaste a un acuerdo</mat-label>
+  <input matInput placeholder="Acuerdo" formControlName="testigos">
+</mat-form-field>
+<mat-divider></mat-divider>
 </form>
 <div class="flex-container">
-  <button mat-raised-button color="primary">Volver</button>
-  <button mat-raised-button color="accent">Continuar</button>
+  <!-- <button type="button" mat-raised-button color="primary" (click)="goBack()">Volver</button> -->
+  <button (click)="generatePdf()">Visualizar</button>
+  <button (click)="save()">Guardar</button>
 </div>
-<button (click)="generatePdf()">Open PDF</button>

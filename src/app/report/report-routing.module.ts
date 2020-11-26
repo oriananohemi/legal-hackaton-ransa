@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [

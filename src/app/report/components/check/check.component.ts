@@ -25,7 +25,7 @@ export class CheckComponent {
     horizontalPosition: MatSnackBarHorizontalPosition = 'start';
     verticalPosition: MatSnackBarVerticalPosition = 'top';
 
-    constructor(private checkService: CheckService, private _snackBar: MatSnackBar) { }
+    constructor(private checkService: CheckService, private snackBar: MatSnackBar) { }
 
     getQuestionsFromIncidence(selected) {
       this.questions = this.checkService.getQuestionsFromIncidence(selected);
@@ -41,7 +41,7 @@ export class CheckComponent {
         this.currentQuestion = i + 1;
       } else {
         this.currentQuestion = i;
-        this._snackBar.open(message, 'End now', {
+        this.snackBar.open(message, 'End now', {
           duration: 3000,
           horizontalPosition: this.horizontalPosition,
           verticalPosition: this.verticalPosition,
