@@ -7,6 +7,7 @@ import {
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
 import { message } from 'src/app/core/services/check/check.constant';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-check',
@@ -22,9 +23,6 @@ export class CheckComponent {
     INCIDENCES = incidences;
     incidences = Object.keys(incidences);
 
-    horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-    verticalPosition: MatSnackBarVerticalPosition = 'top';
-
     constructor(private checkService: CheckService, private snackBar: MatSnackBar) { }
 
     getQuestionsFromIncidence(selected) {
@@ -39,10 +37,11 @@ export class CheckComponent {
       }
       this.currentQuestion = i + 1;
       if (!value) {
-        this.snackBar.open(message, 'Entendido', {
-          duration: 5000,
-          horizontalPosition: this.horizontalPosition,
-          verticalPosition: this.verticalPosition,
+        Swal.fire({
+          html:
+          '<p>Recuerda que sin la acreditación de la infracción, no se puede sancionar. Continúa el proceso y tu gestor de GH te contactará.</p>',
+          confirmButtonColor: '#009A3F',
+          confirmButtonText: 'Entendido'
         });
       }
     }
