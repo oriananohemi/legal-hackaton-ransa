@@ -14,6 +14,9 @@ export class GenerateReportComponent {
 
   user = localStorage.getItem('user');
 
+  minDate: Date;
+  maxDate: Date;
+
   constructor(private reportService: ReportService, private fb: FormBuilder) {
     this.report = this.fb.group({
       reportante: [ this.user, Validators.required ],
@@ -24,6 +27,9 @@ export class GenerateReportComponent {
       relato: [ '', Validators.required ],
       evidencia: [ '', Validators.required ],
     });
+    const currentYear = new Date().getFullYear();
+    this.minDate = new Date(currentYear - 20, 0, 1);
+    this.maxDate = new Date(currentYear + 1, 11, 31);
   }
 
   generatePdf() {
