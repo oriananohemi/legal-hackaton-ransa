@@ -5,6 +5,12 @@
   }
 }
 
+.checkbox-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 20px;
+}
+
 ::ng-deep .mat-form-field {
   margin: 10px;
 }
