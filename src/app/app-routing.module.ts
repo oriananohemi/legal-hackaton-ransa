@@ -10,9 +10,14 @@ const routes: Routes = [
     {
       path: 'new-report',
       loadChildren: () => import('./report/report.module').then(m => m.ReportModule),
+    },
+    {
+      path: 'main',
+      loadChildren: () => import('./view-table/view-table.module').then(m => m.ViewTableModule),
     }
   ]
-},    {
+},
+{
   path: 'auth',
   loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
 },

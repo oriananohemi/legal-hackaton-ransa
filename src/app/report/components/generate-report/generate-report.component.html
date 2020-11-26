@@ -48,7 +48,9 @@
   </mat-form-field>
   <mat-divider></mat-divider>
 <h3>Seleccione la o las causas probables del hecho</h3>
+<div class="checkbox-container">
   <mat-checkbox #checkbox *ngFor="let cause of CAUSES" [value]="cause" (change)="addCause(cause, checkbox.checked)">{{cause}}</mat-checkbox>
+</div>
   <!-- <input matInput placeholder="causa" formControlName="causas"> -->
   <mat-divider></mat-divider>
   <h3>Si conversaste con el colaborador describa a qué acuerdo se llegó y adjunte carta de compromiso y/o

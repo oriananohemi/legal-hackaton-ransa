@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
-import {FirestoreService} from '../core/services/firestore/firestore.service'
+import {FirestoreService} from '../../core/services/firestore/firestore.service'
 import { Observable} from 'rxjs'
-import {Data} from '../core/definitions/data.model'
+import {Data} from '../../core/definitions/data.model'
 
 @Component({
   selector: 'app-chart',

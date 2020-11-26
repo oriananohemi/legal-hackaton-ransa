@@ -1,11 +1,11 @@
 <div class="container">
     <figure class="container_img">
-        <img src="../../../../assets/images/jefeOperaciones.jpeg" alt="">
+        <img [src]="background" alt="">
     </figure>
     <div class="container_form">
         <div>
             <figure class="logo">
-                <img src="../../assets/images/ransa-logo.png">
+                <img [src]="logo">
             </figure>
             <form class="group"  [formGroup]="form" (ngSubmit)="login($event)">
                 <mat-form-field class="input" appearance="fill" for="email">

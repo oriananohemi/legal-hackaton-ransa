@@ -2,17 +2,28 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from '../material/material.module';
-import { SharedComponent } from './shared/shared.component';
+import { TableComponent } from './table/table.component';
+import { ChartComponent } from './chart/chart.component';
+import { Chart2Component } from './chart2/chart2.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
-  declarations: [HeaderComponent, SharedComponent],
+  declarations: [
+    HeaderComponent,
+    TableComponent,
+    ChartComponent,
+    Chart2Component
+  ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    ChartsModule,
   ],
   exports: [
     HeaderComponent,
-    SharedComponent
+    TableComponent,
+    ChartComponent,
+    Chart2Component
   ]
 })
 export class SharedModule { }
