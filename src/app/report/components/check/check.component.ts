@@ -37,10 +37,8 @@ export class CheckComponent {
       if (i === this.questions.length - 1) {
         this.eventEmit.emit();
       }
-      if (value) {
-        this.currentQuestion = i + 1;
-      } else {
-        this.currentQuestion = i + 1;
+      this.currentQuestion = i + 1;
+      if (!value) {
         this.snackBar.open(message, 'Entendido', {
           duration: 5000,
           horizontalPosition: this.horizontalPosition,

@@ -61,3 +61,19 @@ export const incidences = [
 ];
 
 export const message = 'Recuerda que sin la acreditación de la infracción, no se puede sancionar. Continúa el proceso y tu gestor de GH te contactará.'
+
+export const causes = [
+  'Clima',
+  'Prisa',
+  'Trafico',
+  'Fatiga',
+  'Equipo y/o unidad en mal estado',
+  'Efectos del alcohol',
+  'Falla Mecanica',
+  'Distracion',
+  'Conductores, externos temerarios',
+  'No usar EPP',
+  'Peatones temerarios',
+  'Inadecuada coordinacion',
+  'Otros'
+]

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ReportService } from 'src/app/core/services/report-service/report.service';
+import {causes} from '../../../core/services/check/check.constant';
 
 @Component({
   selector: 'app-generate-report',
@@ -13,6 +14,8 @@ export class GenerateReportComponent {
   report: FormGroup;
 
   user = localStorage.getItem('user');
+
+  CAUSES = causes;
 
   minDate: Date;
   maxDate: Date;
@@ -27,6 +30,8 @@ export class GenerateReportComponent {
       testigos: [ '', Validators.required ],
       estado: [ '', Validators.required ],
       relato: [ '', Validators.required ],
+      causas: this.fb.array([]),
+      acuerdo: ['', Validators.required ],
       evidencia: [ '', Validators.required ],
       probatorios: [ '', Validators.required ],
     });
@@ -36,11 +41,20 @@ export class GenerateReportComponent {
   }
 
   generatePdf() {
-    this.reportService.generatePdf('open');
+    this.reportService.generatePdf('open', this.report.value );
+  }
+
+  addCause(value: string, checked: boolean) {
+    const array = this.report.get('causas') as FormArray;
+    if (checked) {
+      array.push(new FormControl(value));
+    } else {
+      array.removeAt((array.value as string[]).findIndex((element: string) => element === value));
+    }
   }
 
   save() {
-    
+    this.reportService.save(this.report.value);
   }
   onFileSelected() {
   //   const inputNode: any = document.querySelector('#file');
