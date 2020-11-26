@@ -22,7 +22,7 @@ export class CheckComponent {
     INCIDENCES = incidences;
     incidences = Object.keys(incidences);
 
-    horizontalPosition: MatSnackBarHorizontalPosition = 'start';
+    horizontalPosition: MatSnackBarHorizontalPosition = 'center';
     verticalPosition: MatSnackBarVerticalPosition = 'top';
 
     constructor(private checkService: CheckService, private snackBar: MatSnackBar) { }
@@ -40,9 +40,9 @@ export class CheckComponent {
       if (value) {
         this.currentQuestion = i + 1;
       } else {
-        this.currentQuestion = i;
-        this.snackBar.open(message, 'End now', {
-          duration: 3000,
+        this.currentQuestion = i + 1;
+        this.snackBar.open(message, 'Entendido', {
+          duration: 5000,
           horizontalPosition: this.horizontalPosition,
           verticalPosition: this.verticalPosition,
         });
