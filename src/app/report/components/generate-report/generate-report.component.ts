@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReportService } from 'src/app/core/services/report-service/report.service';
 
 @Component({
@@ -8,36 +8,42 @@ import { ReportService } from 'src/app/core/services/report-service/report.servi
   styleUrls: ['./generate-report.component.scss']
 })
 export class GenerateReportComponent {
+  @Output() eventEmit = new EventEmitter<void>();
 
-  options: FormGroup;
-  colorControl = new FormControl('primary');
-  fontSizeControl = new FormControl(16, Validators.min(10));
+  report: FormGroup;
 
-  constructor(private reportService: ReportService, fb: FormBuilder) {
-    this.options = fb.group({
-      color: this.colorControl,
-      fontSize: this.fontSizeControl,
+  user = localStorage.getItem('user');
+
+  constructor(private reportService: ReportService, private fb: FormBuilder) {
+    this.report = this.fb.group({
+      reportante: [ this.user, Validators.required ],
+      trabajador: [ '', Validators.required ],
+      lugar: [ '', Validators.required ],
+      testigos: [ '', Validators.required ],
+      estado: [ '', Validators.required ],
+      relato: [ '', Validators.required ],
+      evidencia: [ '', Validators.required ],
     });
   }
 
-  getFontSize() {
-    return Math.max(10, this.fontSizeControl.value);
-  }
   generatePdf() {
-    this.reportService.generatePdf('download');
+    this.reportService.generatePdf('open');
   }
 
+  save() {
+    
+  }
   onFileSelected() {
-    const inputNode: any = document.querySelector('#file');
+  //   const inputNode: any = document.querySelector('#file');
   
-    if (typeof (FileReader) !== 'undefined') {
-      const reader = new FileReader();
+  //   if (typeof (FileReader) !== 'undefined') {
+  //     const reader = new FileReader();
   
-      reader.onload = (e: any) => {
-        this.srcResult = e.target.result;
-      };
+  //     reader.onload = (e: any) => {
+  //       this.srcResult = e.target.result;
+  //     };
   
-      reader.readAsArrayBuffer(inputNode.files[0]);
-    }
+  //     reader.readAsArrayBuffer(inputNode.files[0]);
+  //   }
   }
 }

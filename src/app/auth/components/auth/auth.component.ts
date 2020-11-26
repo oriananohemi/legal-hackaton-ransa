@@ -37,7 +37,8 @@ export class AuthComponent implements OnInit {
       this.authService
         .login(value.email, value.password)
         .then(() => {
-            this.router.navigate(['/']);
+          localStorage.setItem('user', value.email),
+          this.router.navigate(['/']);
         })
         .catch((err) => {
           Swal.fire(

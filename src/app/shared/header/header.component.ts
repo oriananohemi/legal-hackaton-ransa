@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  user = localStorage.getItem('user');
+
   logo = 'assets/images/ransa-logo.png';
 
   profile = 'assets/images/profile-icon.png';

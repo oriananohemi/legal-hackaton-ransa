@@ -7,9 +7,10 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
   providedIn: 'root'
 })
 export class ReportService {
+  info;
 
   generatePdf(action) {
-    const documentDefinition = { content: 'This is an sample PDF printed with pdfMake' };
+    const documentDefinition = { content: 'Ejemplo' };
 
     switch (action) {
       case 'open': return pdfMake.createPdf(documentDefinition).open();
