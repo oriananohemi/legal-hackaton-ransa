@@ -1,6 +1,15 @@
+@import "./app/styles/foundations/breakpoints";
+@import "./app/styles/foundations/colors";
+@import "./app/styles/foundations/spacing";
+
 @font-face {
   font-family: univia;
   src: url("./assets/fonts/UniviaPro-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -10,4 +19,25 @@ body {
 body {
   margin: 0;
   font-family: univia, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.responsive-image {
+  max-width: 100%;
+}
+
+.flex-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.subtitle {
+  color: $main-color;
+  font-size: 22px;
+  margin: 20px 0;
 }

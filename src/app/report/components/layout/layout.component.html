@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="subtitle">Genera tu reporte de incidencias</h1>
+
+  <mat-tab-group [selectedIndex]="currentTab" color="accent" backgroundColor="primary">
+    <mat-tab label="1 - Identificacion">
+      <app-check (eventEmit)="changeTab()"></app-check>
+    </mat-tab>
+    <mat-tab label="2 - Generacion de reporte">
+      <app-generate-report (eventEmit)="changeTab()"></app-generate-report>
+    </mat-tab>
+  </mat-tab-group>
+</div>

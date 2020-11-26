@@ -1,35 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {ReactiveFormsModule} from '@angular/forms'
 import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { LayoutComponent } from './layout/layout.component';
 
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ViewTableComponent } from './view-table/view-table.component';
-import { TableComponent } from './components/table/table.component';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-
-import { environment } from 'src/environments/environment';
-import { SanctionsService } from './services/sanctions.service';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
-    ViewTableComponent,
-    TableComponent
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule,
-    AngularFireModule,
-    AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase)
-
+    ReactiveFormsModule,
+    SharedModule,
+    [SweetAlert2Module.forRoot()],
+    ChartsModule,
   ],
-  providers: [SanctionsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,77 @@
+<form [formGroup]="report" class="report">
+  <h3>Reportante</h3>
+  <mat-form-field class="example-full-width" [style.width.px]=300>
+    <mat-label>Reportante</mat-label>
+    <input matInput placeholder="Alexa Rogue" formControlName="reportante">
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <h3>Involucrado</h3>
+  <mat-form-field class="example-full-width" [style.width.px]=300>
+    <mat-label>Involucrado</mat-label>
+    <input matInput placeholder="Trabajador 1" formControlName="trabajador">
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <h3>Lugar de los hechos</h3>
+  <mat-form-field class="example-full-width" [style.width.px]=300>
+    <mat-label>Lugar de los hechos</mat-label>
+    <input matInput placeholder="Sede Lima" formControlName="lugar">
+  </mat-form-field>
+  <mat-divider></mat-divider>
+  <mat-form-field class="example-full-width" appearance="fill" [style.width.px]=300>
+    <mat-label>Choose a date</mat-label>
+    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="fecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <input type="time" formControlName="hora" name="hora">
+  <mat-divider></mat-divider>
+  <h3>Si los hechos involucraron testigos identíficalos y asegura su declaración</h3>
+  <mat-form-field class="example-full-width" [style.width.px]=300>
+    <mat-label>Ingrese el nombre y apellido de los testigos</mat-label>
+    <input matInput placeholder="Testigo 1 , Testigo 2" formControlName="testigos">
+</mat-form-field>
+<mat-divider></mat-divider>
+<h3>Si los hechos involucraron equipos y/o herramientas ¿Se encontraban en buenas condiciones de operatividad y con mantenimientos al día?</h3>
+<mat-form-field appearance="fill" [style.width.px]=300>
+  <mat-label>Seleccione</mat-label>
+  <mat-select formControlName="estado">
+    <mat-option value="option">Seleccione</mat-option>
+    <mat-option [value]=true>si</mat-option>
+    <mat-option [value]=false>no</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-divider></mat-divider>
+<h3>Relata brevemente lo sucedido</h3>
+<mat-form-field appearance="fill" [style.width.px]=300>
+  <mat-label>Me encontraba con el colaborador.....</mat-label>
+  <textarea matInput formControlName="relato"></textarea>
+  </mat-form-field>
+  <mat-divider></mat-divider>
+<h3>Seleccione la o las causas probables del hecho</h3>
+<div class="checkbox-container">
+  <mat-checkbox #checkbox *ngFor="let cause of CAUSES" [value]="cause" (change)="addCause(cause, checkbox.checked)">{{cause}}</mat-checkbox>
+</div>
+  <!-- <input matInput placeholder="causa" formControlName="causas"> -->
+  <mat-divider></mat-divider>
+  <h3>Si conversaste con el colaborador describa a qué acuerdo se llegó y adjunte carta de compromiso y/o
+    declaración jurada simple en la evidencia</h3>
+  <mat-form-field class="example-full-width" [style.width.px]=300>
+    <mat-label>Describe el acuerdo</mat-label>
+    <input matInput placeholder="El colaborador reconocio el error por lo que ..." formControlName="acuerdo">
+</mat-form-field>
+<mat-divider></mat-divider>
+<button type="button" mat-raised-button (click)="fileInput.click()" [style.width.px]=300>Choose File</button>
+<input hidden (change)="onFileSelected()" #fileInput type="file" id="file" formControlName="evidencia">
+<mat-divider></mat-divider>
+<h3>Describa los medios probatorios que se adjuntan</h3>
+<mat-form-field class="example-full-width" [style.width.px]=300>
+  <mat-label>Medios Probatorios</mat-label>
+  <input matInput placeholder="Medios Probatorios" formControlName="probatorios">
+</mat-form-field>
+<mat-divider></mat-divider>
+<div class="flex-container">
+  <button mat-raised-button color="primary" (click)="generatePdf()">Visualizar</button>
+  <button mat-raised-button color="accent" (click)="save()">Finalizar</button>
+</div>
+</form>
+<!-- <button type="button" mat-raised-button color="primary" (click)="goBack()">Volver</button> -->

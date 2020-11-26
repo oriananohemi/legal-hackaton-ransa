@@ -1,0 +1,70 @@
+@import "../../../styles.scss";
+
+.main-content {
+  padding-right: 18%;
+  padding-left: 18%;
+  padding-top: 5%;
+
+  .initial-information {
+    .grafico {
+      width: 50%;
+    }
+    .interactions-search {
+      display: flex;
+      .search-bar {
+        background: #ffffff;
+        /* Gris 3 */
+        height: 80%;
+        align-self: center;
+        margin-right: 5%;
+        border: 1px solid $gray-clear;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          border: none;
+          width: 100%;
+        }
+
+        input:focus {
+          outline: none;
+        }
+
+        .button-search {
+          /* Green letter Ransa */
+          height: 34px;
+          width: 30%;
+          background: $main-color;
+          border: 1px solid $gray-clear;
+          box-sizing: border-box;
+          border-radius: 0px 4px 4px 0px;
+          color: #ffff;
+        }
+      }
+      .incidents-section-filter {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .filter {
+          display: flex;
+          // justify-content: space-between;
+          margin-top: 2.5%;
+          align-items: center;
+
+          select {
+            height: 36px;
+            margin-left: 5%;
+          }
+        }
+      }
+    }
+  }
+
+  .incidents-section-table {
+    margin-top: 5%;
+  }
+}

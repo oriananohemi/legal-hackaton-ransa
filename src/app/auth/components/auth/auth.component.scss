@@ -1,0 +1,54 @@
+@import '../../../../styles.scss';
+
+.container{
+    display: flex;
+    background-color: $gray-background;
+    &_img{
+        height: 100vh;
+        img{
+            height: 100%;
+        }
+    }
+    &_form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 50px 0 50px 0;
+            .logo{
+                width: 350px;
+                margin-bottom: 50px;
+                img{
+                    width: 100%;
+                }
+            }
+            .group{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                .input{
+                    width: 100%;
+                }
+                .button{
+                    height: 50px;
+                    width: 100%;
+                }
+                .options{
+                    justify-content: start;
+                    a{
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
