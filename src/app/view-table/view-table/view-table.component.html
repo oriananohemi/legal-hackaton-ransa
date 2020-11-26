@@ -6,8 +6,12 @@
           </div>
           <button routerLink="/new-report" mat-raised-button color="primary">Nueva Incidencia</button>
         </div>
-        <img src="../../assets/img/Group 222.png" class="grafico1">
-        <app-chart></app-chart>
+        <div class="flex-container">
+          <img src="../../assets/img/Group 222.png" class="grafico1">
+          <div class="chart">
+            <app-chart></app-chart>
+          </div>
+        </div>
         <div class="interactions-search">
           <div class="search-bar">
             <input type="text" name="" id="search-bar-input" placeholder="Ingresa el código o nombre del colaborador">
