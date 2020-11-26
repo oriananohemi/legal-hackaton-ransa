@@ -22,10 +22,13 @@ export class GenerateReportComponent {
       reportante: [ this.user, Validators.required ],
       trabajador: [ '', Validators.required ],
       lugar: [ '', Validators.required ],
+      fecha: [ '', Validators.required ],
+      hora: [ '', Validators.required ],
       testigos: [ '', Validators.required ],
       estado: [ '', Validators.required ],
       relato: [ '', Validators.required ],
       evidencia: [ '', Validators.required ],
+      probatorios: [ '', Validators.required ],
     });
     const currentYear = new Date().getFullYear();
     this.minDate = new Date(currentYear - 20, 0, 1);
