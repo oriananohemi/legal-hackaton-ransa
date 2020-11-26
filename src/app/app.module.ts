@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChartsModule } from 'ng2-charts';
 import { ChartComponent } from './chart/chart.component';
+import { Chart2Component } from './chart2/chart2.component';
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
-    ChartComponent
+    ChartComponent,
+    Chart2Component
   ],
   imports: [
     BrowserModule,
