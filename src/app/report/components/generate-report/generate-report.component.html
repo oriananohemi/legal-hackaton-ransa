@@ -48,9 +48,6 @@
   </mat-form-field>
   <mat-divider></mat-divider>
 <h3>Seleccione la o las causas probables del hecho</h3>
-<pre>
-  {{ report.get('causas').value | json }}
-</pre>
   <mat-checkbox #checkbox *ngFor="let cause of CAUSES" [value]="cause" (change)="addCause(cause, checkbox.checked)">{{cause}}</mat-checkbox>
   <!-- <input matInput placeholder="causa" formControlName="causas"> -->
   <mat-divider></mat-divider>

@@ -46,7 +46,7 @@ export class GenerateReportComponent {
 
   addCause(value: string, checked: boolean) {
     const array = this.report.get('causas') as FormArray;
-    if(checked) {
+    if (checked) {
       array.push(new FormControl(value));
     } else {
       array.removeAt((array.value as string[]).findIndex((element: string) => element === value));
