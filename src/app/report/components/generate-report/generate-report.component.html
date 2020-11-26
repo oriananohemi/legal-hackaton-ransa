@@ -67,7 +67,7 @@
     declaración jurada simple en la evidencia</h3>
   <mat-form-field class="example-full-width" [style.width.px]=300>
     <mat-label>Describe el acuerdo</mat-label>
-    <input matInput placeholder="El colaborador reconocio el error por lo que ..." formControlName="testigos">
+    <input matInput placeholder="El colaborador reconocio el error por lo que ..." formControlName="acuerdo">
 </mat-form-field>
 <mat-divider></mat-divider>
 <button type="button" mat-raised-button (click)="fileInput.click()" [style.width.px]=300>Choose File</button>
@@ -82,6 +82,6 @@
 </form>
 <div class="flex-container">
   <!-- <button type="button" mat-raised-button color="primary" (click)="goBack()">Volver</button> -->
-  <button (click)="generatePdf()">Visualizar</button>
-  <button (click)="save()">Finalizar</button>
+  <button mat-raised-button color="primary" (click)="generatePdf()">Visualizar</button>
+  <button mat-raised-button color="accent" (click)="save()">Finalizar</button>
 </div>

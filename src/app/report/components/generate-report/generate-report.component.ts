@@ -27,6 +27,8 @@ export class GenerateReportComponent {
       testigos: [ '', Validators.required ],
       estado: [ '', Validators.required ],
       relato: [ '', Validators.required ],
+      causas: ['', Validators.required ],
+      acuerdo: ['', Validators.required ],
       evidencia: [ '', Validators.required ],
       probatorios: [ '', Validators.required ],
     });
@@ -40,7 +42,7 @@ export class GenerateReportComponent {
   }
 
   save() {
-    
+    this.reportService.save(this.report);
   }
   onFileSelected() {
   //   const inputNode: any = document.querySelector('#file');
