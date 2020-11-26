@@ -1,0 +1,27 @@
+
+         
+           <table  class="content-table">
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Nombre</th>
+                  <th>Tipo de incidencia</th>
+                  <th>Fecha de incidencia</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let sanction of allSanctions">
+                  <td>{{sanction.codigo}}</td>
+                  <td>{{sanction.nombreTrabajador}}</td>
+                  <td>{{sanction.motivo}}</td>
+                  <td>{{sanction.fechaIncidencia}}</td>
+                  <td>{{sanction.estado}}</td>
+                  <td>
+                    <!-- <img src="../../../assets/img/eye-1915454_640.png" class="visualizar-icon"> -->
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>

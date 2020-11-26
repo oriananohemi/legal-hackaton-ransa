@@ -1,0 +1,110 @@
+$green-Ransa: #009A3F;
+$gray-Ransa: #50535A;
+$gray-clear: #9D9D9C;
+
+
+header {
+    height: 14%;
+    border-bottom: solid 1px orange;
+}
+
+.main-content {
+    padding-right: 18%;
+    padding-left: 18%;
+    padding-top: 5%;
+
+    .initial-information {
+        .information{display: flex;
+            justify-content: space-between;
+        .title{
+ h1 {
+            color: $green-Ransa;
+            font-size: 22px;
+        }}
+        .add-incident {
+            
+           
+            button {
+                background: #F39200;
+                border-radius: 5px;
+                width: 150%;
+                height: 50px;
+                border: none;
+                filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.14)), drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.12)), drop-shadow(0px 1px 10px rgba(0, 0, 0, 0.2));
+
+            }
+        }}
+        .grafico1 {
+           width: 60%;
+        }
+        .grafico2{
+            width: 40%;
+        }
+.interactions-search{
+    display: flex;
+    .search-bar {
+            background: #FFFFFF;
+            /* Gris 3 */
+height: 80%;
+align-self: center;
+margin-right: 5%;
+            border: 1px solid #B6B7B7;
+            box-sizing: border-box;
+            border-radius: 4px;
+            width: 45%;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                border: none;
+                width: 100%;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            .button-search {
+
+                /* Green letter Ransa */
+                height: 34px;
+                width: 30%;
+                background: $green-Ransa;
+                border: 1px solid #B6B7B7;
+                box-sizing: border-box;
+                border-radius: 0px 4px 4px 0px;
+                color: #FFFF;
+            }
+        }
+    .incidents-section-filter {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .filter {
+            display: flex;
+            // justify-content: space-between;
+            margin-top: 2.5%;
+            align-items: center;
+
+            select {
+                height: 36px;
+                margin-left: 5%;
+            }
+        }
+
+
+    }
+}
+        
+    }
+
+
+
+
+
+
+    .incidents-section-table {
+        margin-top: 5%;
+    }
+}
