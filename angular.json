@@ -30,7 +30,8 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss",
-              "src/custom.scss"
+              "src/custom.scss",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -134,6 +135,6 @@
   },
   "defaultProject": "ransa",
   "cli": {
-    "analytics": "1b19ab0e-5d97-4ed9-9e60-090de6453306"
+    "analytics": false
   }
 }

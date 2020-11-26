@@ -1,0 +1,31 @@
+@import "../../../styles.scss";
+
+table {
+  width: 100%;
+}
+.content-table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+tr {
+  height: 45px;
+  text-align: left;
+}
+
+.content-table thead tr {
+  border-bottom: 1px solid $gray-clear;
+  border-top: 1px solid $gray-clear;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid $gray-clear;
+  td {
+    img {
+      font-size: 15px;
+    }
+  }
+}
