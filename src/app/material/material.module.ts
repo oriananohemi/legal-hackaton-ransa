@@ -11,7 +11,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatDividerModule} from '@angular/material/divider';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+ 
 @NgModule({
   declarations: [],
   imports: [
@@ -26,7 +27,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatButtonToggleModule,
     MatSnackBarModule,
     MatDatepickerModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCheckboxModule
   ],
   exports: [
     MatFormFieldModule,
@@ -39,7 +41,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatButtonToggleModule,
     MatSnackBarModule,
     MatDatepickerModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule { }
