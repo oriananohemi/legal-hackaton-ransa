@@ -25,7 +25,7 @@ import { ChartComponent } from './chart/chart.component';
     ReactiveFormsModule,
     SharedModule,
     [SweetAlert2Module.forRoot()],
-    ChartsModule
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
