@@ -13,6 +13,7 @@
   <mat-divider></mat-divider>
   <h3>Lugar de los hechos</h3>
   <mat-form-field class="example-full-width" [style.width.px]=300>
+  <h3>Fecha y hora</h3>
     <mat-label>Lugar de los hechos</mat-label>
     <input matInput placeholder="Sede Lima" formControlName="lugar">
   </mat-form-field>
@@ -60,8 +61,8 @@
     <input matInput placeholder="El colaborador reconocio el error por lo que ..." formControlName="acuerdo">
 </mat-form-field>
 <mat-divider></mat-divider>
-<button type="button" mat-raised-button (click)="fileInput.click()" [style.width.px]=300>Choose File</button>
-<input hidden (change)="onFileSelected()" #fileInput type="file" id="file" formControlName="evidencia">
+<!-- <button type="button" mat-raised-button (click)="fileInput.click()" [style.width.px]=300>Choose File</button> -->
+<!-- <input hidden (change)="onFileSelected($event)" #fileInput type="file" id="file" formControlName="evidencia"> -->
 <mat-divider></mat-divider>
 <h3>Describa los medios probatorios que se adjuntan</h3>
 <mat-form-field class="example-full-width" [style.width.px]=300>

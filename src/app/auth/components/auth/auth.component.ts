@@ -25,7 +25,7 @@ export class AuthComponent implements OnInit {
   ) {
     this.buildForm();
   }
-  
+
   ngOnInit(): void {
   }
 
@@ -43,7 +43,7 @@ export class AuthComponent implements OnInit {
             this.router.navigate(['/main'])
             Swal.fire({
               title: '¡Bienvenido(a) a tu plataforma de disciplina laboral!',
-              html: 
+              html:
               '<video width=400 src="https://firebasestorage.googleapis.com/v0/b/ransa-d8b38.appspot.com/o/WhatsApp%20Video%202020-11-24%20at%209.07.41%20AM.mp4?alt=media&token=bd024ad9-0701-4998-abfd-51ba3ed9e047" autoplay controls></video>' +
               '<p>¿Deseas conocer más sobre disciplina laboral y los tipos de sanciones queson aplicables?</p>',
               showCancelButton: true,

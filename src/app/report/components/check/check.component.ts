@@ -8,6 +8,7 @@ import {
 } from '@angular/material/snack-bar';
 import { message } from 'src/app/core/services/check/check.constant';
 import Swal from 'sweetalert2';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-check',
@@ -23,6 +24,8 @@ export class CheckComponent {
     INCIDENCES = incidences;
     incidences = Object.keys(incidences);
 
+    answer: FormControl;
+
     constructor(private checkService: CheckService, private snackBar: MatSnackBar) { }
 
     getQuestionsFromIncidence(selected) {
@@ -32,9 +35,6 @@ export class CheckComponent {
     }
 
     getNextQuestion(value: boolean, i: number) {
-      if (i === this.questions.length - 1) {
-        this.eventEmit.emit();
-      }
       this.currentQuestion = i + 1;
       if (!value) {
         Swal.fire({
@@ -46,4 +46,7 @@ export class CheckComponent {
       }
     }
 
+    goNext() {
+      this.eventEmit.emit();
+    }
 }

@@ -1,4 +1,4 @@
-<h2>¿Que tipo de incidencia deseas reportar?</h2>
+<h2 class="question">¿Que tipo de incidencia deseas reportar?</h2>
 
 <mat-form-field appearance="fill">
   <mat-label>Selecciona una opcion</mat-label>
@@ -9,7 +9,7 @@
 <section *ngIf="show === true">
   <ng-container *ngFor="let question of questions; let i = index">
     <ng-container *ngIf="i <= currentQuestion">
-      <h2>{{ question }}</h2>
+      <h2 class="question">{{ question }}</h2>
       <mat-form-field appearance="fill">
         <mat-label>Selecciona una opcion</mat-label>
         <mat-select value="" (valueChange)="getNextQuestion($event, i)">
@@ -20,3 +20,4 @@
     </ng-container>
   </ng-container>
 </section>
+<button mat-raised-button color="primary" (click)="goNext()" class="button">Siguiente</button>

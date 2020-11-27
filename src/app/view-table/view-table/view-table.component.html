@@ -1,8 +1,8 @@
 <div class="main-content">
     <div class="initial-information">
         <div class="flex-container">
-          <h1 class="subtitle">Historial de incidencias</h1>
-          <button routerLink="/new-report" mat-raised-button color="primary">Nueva Incidencia</button>
+          <h1 class="title">Historial de incidencias</h1>
+          <button routerLink="/new-report" mat-raised-button color="accent">Nueva Incidencia</button>
         </div>
         <div class="flex-container">
           <app-chart2 class="grafico"></app-chart2>
@@ -17,7 +17,6 @@
         </div>
         <div class="incidents-section-filter">
           <div class="filter">
-
             <p>filtrar por:</p>
             <select name="" id="">
                 <option value="Tipo" >Tipo de incidencia</option>
@@ -42,18 +41,12 @@
             <option value="">Pendiente</option>
         </select> -->
         </div>
-            
         </div>
         </div>
-        
     </div>
-    
-        
-        
         <div class="incidents-section-table">
           <div>
             <app-table ></app-table>
           </div>
-          
         </div>
 </div>
