@@ -27,11 +27,13 @@ export class TableComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
+    
     this.sanctions$.getAllSanctions().subscribe(sanctions => {
       this.dataSource.data = sanctions;
+      this.onSelectStatus(this.selectedValue);
     })
 
-    this.onSelectStatus(this.selectedValue);
+    
   }
 
   onSelectStatus(status) {
@@ -44,6 +46,8 @@ export class TableComponent implements OnInit, AfterViewInit {
           if(estado=='Aprobado'){
             aprobados.push(item)
             console.log(aprobados);
+            console.log(estado);
+            
             
           }
 
