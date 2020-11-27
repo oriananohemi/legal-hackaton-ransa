@@ -1,6 +1,4 @@
 import { image } from './brand-image.constant';
-import { map } from 'rxjs/operators';
-import { element } from 'protractor';
 
 export const info = (report) => {
   return ({

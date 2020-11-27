@@ -1,18 +1,23 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFireStorage } from '@angular/fire/storage';
 import { info } from './report.constant'
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { Observable } from 'rxjs';
+import { finalize } from 'rxjs/operators';
+import { firm } from '../../definitions/report.model';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 @Injectable({
   providedIn: 'root'
 })
 export class ReportService {
-  private incidence: AngularFirestoreCollection;
-  constructor(private afs: AngularFirestore) {
-    this.incidence = this.afs.collection('sanciones');
+  firma$: Observable<firm>;
+  private incidenceCollection: AngularFirestoreCollection;
+  constructor(private storage: AngularFireStorage, private afs: AngularFirestore) {
+    // this.incidenceCollection = this.afs.collection('sanciones');
   }
-  
+
   generatePdf(action, sancion) {
     const documentDefinition = info(sancion);
 
@@ -23,24 +28,26 @@ export class ReportService {
       default: return pdfMake.createPdf(documentDefinition).open();
     }
   }
-  onFileSelected() {
-      const inputNode: any = document.querySelector('#file');
-    
-      if (typeof (FileReader) !== 'undefined') {
-        // const reader = new FileReader();
-    
-        // reader.onload = (e: any) => {
-        //   this.srcResult = e.target.result;
-        // };
-    
-        // reader.readAsArrayBuffer(inputNode.files[0]);
-      }
-    }
+  onFileSelected(fileURL) {
+    const day = Date.now();
+    const file = fileURL;
+    const filePath = `mediosprobatorios/${day}`;
+    const fileRef = this.storage.ref(filePath);
+    const task = this.storage.upload(filePath, file);
+    task
+      .snapshotChanges()
+      .pipe(
+        finalize(() => {
+          fileRef.getDownloadURL().subscribe(url => {
+            return url;
+          });
+        })
+      )
+      .subscribe();
+  }
 
   save(sancion) {
-    console.log(sancion)
     const id = this.afs.createId();
-    
-    // return this.incidence.doc(id).set()
+    return this.incidenceCollection.doc(id).set(sancion);
   }
 }

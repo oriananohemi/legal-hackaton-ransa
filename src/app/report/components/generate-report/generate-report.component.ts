@@ -17,6 +17,8 @@ export class GenerateReportComponent {
 
   CAUSES = causes;
 
+  file: string;
+
   minDate: Date;
   maxDate: Date;
 
@@ -26,14 +28,14 @@ export class GenerateReportComponent {
       trabajador: [ '', Validators.required ],
       lugar: [ '', Validators.required ],
       fecha: [ '', Validators.required ],
-      hora: [ '', Validators.required ],
-      testigos: [ '', Validators.required ],
-      estado: [ '', Validators.required ],
-      relato: [ '', Validators.required ],
+      hora: [ '' ],
+      testigos: [ '' ],
+      estado: [ '' ],
+      relato: [ '' ],
       causas: this.fb.array([]),
-      acuerdo: ['', Validators.required ],
-      evidencia: [ '', Validators.required ],
-      probatorios: [ '', Validators.required ],
+      acuerdo: ['' ],
+      evidencia: [ '' ],
+      probatorios: [ '' ],
     });
     const currentYear = new Date().getFullYear();
     this.minDate = new Date(currentYear - 20, 0, 1);
@@ -42,6 +44,9 @@ export class GenerateReportComponent {
 
   generatePdf() {
     this.reportService.generatePdf('open', this.report.value );
+    if (this.file) {
+      this.reportService.onFileSelected(this.file);
+    }
   }
 
   addCause(value: string, checked: boolean) {
@@ -56,7 +61,8 @@ export class GenerateReportComponent {
   save() {
     this.reportService.save(this.report.value);
   }
-  onFileSelected() {
-    this.reportService.onFileSelected();
+  onFileSelected($event) {
+    this.file = $event.target.files[0];
+    console.log(this.file)
   }
 }
