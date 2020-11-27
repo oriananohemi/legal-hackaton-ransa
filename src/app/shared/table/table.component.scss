@@ -45,3 +45,24 @@ tr {
        }
      
 }
+
+
+.section-filters{
+  display: flex;
+  justify-content: space-between;
+  .incidents-section-filter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 40%;
+  
+  color: rgba(0, 0, 0, 0.54);
+
+
+  
+}
+
+table{
+  color: rgba(0, 0, 0, 0.54);
+}
+}

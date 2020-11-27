@@ -1,59 +1,36 @@
 <div class="main-content">
-    <div class="initial-information">
-        <div class="flex-container">
-          <h1 class="subtitle">Historial de incidencias</h1>
-          <button routerLink="/new-report" mat-raised-button color="primary">Nueva Incidencia</button>
-        </div>
-        <div class="flex-container">
-          <app-chart2 class="grafico"></app-chart2>
-            <app-chart class="grafico"></app-chart>
-        </div>
-        <div class="interactions-search">
-          <div class="search-bar">
-            <input type="text" name="" id="search-bar-input" placeholder="Ingresa el código o nombre del colaborador">
-            <button class="button-search">
-              <i class="fas fa-search"></i>
-              buscar</button>
-        </div>
-        <div class="incidents-section-filter">
-          <div class="filter">
+  <div class="initial-information">
+    <div class="flex-container">
+      <h1 class="subtitle">Historial de incidencias</h1>
+      <button routerLink="/new-report" class="btn-new" mat-raised-button color="primary">
+        <mat-icon style="vertical-align: middle;">add</mat-icon>
+        NUEVA INCIDENCIA
 
-            <p>filtrar por:</p>
-            <select name="" id="">
-                <option value="Tipo" >Tipo de incidencia</option>
-                <option value="">ausentismo</option>
-                <option value="">tardanzas</option>
-                <option value="">abandonos</option>
-                <option value="">trabajo mal realizado</option>
-                <option value="">Seguridad y Salud</option>
-                <option value="">desobediencia</option>
-                <option value="">otros</option>
-                <option value="">falta de respeto</option>
-                <option value="">incumplimiento de capacitaciones</option>
-
-            </select>
-            <select name="" id="">
-              <option value="Estado" >Estado</option>
-              <option value="pendiente">Pendiente</option>
-              <option value="cerrado">Cerrado</option>
-          </select>
-          <!-- <select name="" id="">
-            <option value="Estado" >Fecha</option>
-            <option value="">Pendiente</option>
-        </select> -->
-        </div>
-            
-        </div>
-        </div>
-        
+      </button>
     </div>
-    
-        
-        
-        <div class="incidents-section-table">
-          <div>
-            <app-table></app-table>
-          </div>
-          
-        </div>
+    <div class="graphic-container">
+
+      <app-chart2 class="grafico"></app-chart2>
+      <app-chart class="grafico"></app-chart>
+    </div>
+    <div class="interactions-search">
+      <!-- <div class="search-bar">
+        <input type="text" name="" id="search-bar-input" placeholder="Ingresa el código o nombre del colaborador">
+        <button class="button-search">
+          <i class="fas fa-search"></i>
+          buscar</button>
+      </div> -->
+      
+    </div>
+
+  </div>
+
+
+
+  <div class="incidents-section-table">
+    <div>
+      <app-table></app-table>
+    </div>
+
+  </div>
 </div>

@@ -10,11 +10,16 @@ import { ChartsModule } from 'ng2-charts';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatSelectModule} from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
 
 const materialModules = [
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatPaginatorModule,
+  MatInputModule,
+  MatSelectModule
 ];
 
 @NgModule({
