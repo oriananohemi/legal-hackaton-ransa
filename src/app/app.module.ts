@@ -13,10 +13,12 @@ import { ChartsModule } from 'ng2-charts';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FilterPipe } from './pipes/filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

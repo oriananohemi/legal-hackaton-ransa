@@ -27,18 +27,45 @@ export class TableComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
+    
     this.sanctions$.getAllSanctions().subscribe(sanctions => {
       this.dataSource.data = sanctions;
+      this.onSelectStatus(this.selectedValue);
     })
 
-    this.onSelectStatus();
+    
   }
 
-  onSelectStatus() {
-    if (this.selectedValue !== '') {
-      console.log(this.selectedValue);
+  onSelectStatus(status) {
+    //if (this.selectedValue !== '') {
+     let aprobados:any= [];
 
-    }
+      if(status !== ''){
+        for(let item of this.dataSource.data){
+          const estado =item.estado;
+          if(estado=='Aprobado'){
+            aprobados.push(item)
+            console.log(aprobados);
+            console.log(estado);
+            
+            
+          }
+
+      }
+       console.log(status);
+          switch (status) {
+          case 'aprobado':
+
+            this.dataSource.data = aprobados;
+            console.log(aprobados);
+            break;
+          
+          default:
+            console.log('Lo lamentamo');
+        }
+      }
+      
+     
 
   }
 

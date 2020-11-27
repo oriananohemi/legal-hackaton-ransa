@@ -13,7 +13,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export class ReportService {
   private incidenceCollection: AngularFirestoreCollection;
   constructor(private storage: AngularFireStorage, private afs: AngularFirestore) {
-    this.incidenceCollection = this.afs.collection('reportes');
+    this.incidenceCollection = this.afs.collection('sanciones');
   }
 
   generatePdf(action, sancion) {
