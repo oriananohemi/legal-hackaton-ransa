@@ -23,7 +23,7 @@
           <img class="icon" [src]=profile alt="">
           {{user}}
         </a>
-        <a class="sesion" *ngIf="show === true">Cerrar Sesion</a>
+        <a (click)="logout()" class="sesion" *ngIf="show === true">Cerrar Sesion</a>
       </li>
     </ul>
   </nav>

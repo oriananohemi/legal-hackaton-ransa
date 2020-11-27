@@ -1,0 +1,68 @@
+@import "../../../styles.scss";
+*{
+  text-align: center;
+}
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.content-table {
+  border-collapse: collapse;
+  font-size: 16px;
+  min-width: 100%;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+tr {
+  height: 45px;
+  text-align: left;
+}
+
+.content-table thead tr {
+  border-bottom: 1px solid $gray-clear;
+  border-top: 1px solid $gray-clear;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid $gray-clear;
+  padding-left: 5%;
+  padding-right: 5%;
+  td{
+    padding: 2%;
+  }
+}
+
+     .icons-actions{
+       display: flex;
+       justify-content: space-between;
+       img{
+         height: 20px;
+       }
+     
+}
+
+
+.section-filters{
+  display: flex;
+  justify-content: space-between;
+  .incidents-section-filter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 40%;
+  
+  color: rgba(0, 0, 0, 0.54);
+
+
+  
+}
+
+table{
+  color: rgba(0, 0, 0, 0.54);
+}
+}

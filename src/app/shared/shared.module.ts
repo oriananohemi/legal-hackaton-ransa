@@ -7,6 +7,7 @@ import { TableComponent } from './table/table.component';
 import { ChartComponent } from './chart/chart.component';
 import { Chart2Component } from './chart2/chart2.component';
 import { ChartsModule } from 'ng2-charts';
+import { TableLaboralComponent } from './table-laboral/table-laboral.component';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -27,7 +28,8 @@ const materialModules = [
     HeaderComponent,
     TableComponent,
     ChartComponent,
-    Chart2Component
+    Chart2Component,
+    TableLaboralComponent
   ],
   imports: [
     CommonModule,
@@ -41,6 +43,7 @@ const materialModules = [
     TableComponent,
     ChartComponent,
     Chart2Component,
+    TableLaboralComponent,
     materialModules
   ]
 })
