@@ -1,3 +1,5 @@
+@import "../../../../styles.scss";
+
 .report {
   padding: 20px;
   h3 {
@@ -13,4 +15,60 @@
 
 ::ng-deep .mat-form-field {
   margin: 10px;
+}
+
+input[type="time"] {
+  background-color: #f5f5f5;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+  height: 40px;
+  margin: 20px 0;
+  width: 300px;
+}
+
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+}
+
+input[type="time"]::-webkit-datetime-edit-text {
+  padding: 20px 4px;
+}
+
+input[type="time"]::-webkit-datetime-edit-hour-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+input[type="time"]::-webkit-datetime-edit-minute-field {
+  background-color: #f2f4f5;
+  border-radius: 15%;
+  padding: 19px 13px;
+}
+
+/* AM/PM */
+input[type="time"]::-webkit-datetime-edit-ampm-field {
+  background-color: $main-color;
+  border-radius: 15%;
+  color: #fff;
+  padding: 19px 13px;
+}
+
+input[type="time"]::-webkit-clear-button {
+  display: none;
+}
+
+input[type="time"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+mat-form-field {
+  margin: 20px 0;
+}
+
+.spinner {
+  position: fixed;
+  top: 10%;
+  right: 50%;
 }
