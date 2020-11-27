@@ -4,16 +4,16 @@
     <mat-label style="display: flex;justify-content: space-between;font-size:100%;">Buscar <mat-icon
         style="font-size:150%;">search</mat-icon>
     </mat-label>
-  
+
     <input matInput (keyup)="applyFilter($event)" placeholder="Nombre del empleado,codigo o estado" #input>
-  
+
   </mat-form-field>
   <div class="incidents-section-filter">
 
     <!-- <h4>Filtrar por:</h4> -->
     <mat-form-field appearance="fill" class="input-select">
       <mat-label>Tipo de incidencia</mat-label>
-      <mat-select [(value)]="selectedIncidence" (valueChange)="onSelectIncidence(valIncidence.value)" #valIncidence>
+      <mat-select>
         <mat-option value="ninguno">--</mat-option>
         <mat-option value="ausentismo">Ausentismo</mat-option>
         <mat-option value="tardanzas">Tardanzas</mat-option>
@@ -81,9 +81,12 @@
         <a href="https://firebasestorage.googleapis.com/v0/b/ransa-d8b38.appspot.com/o/reportes%2F1606484525725?alt=media&token=c1e2075a-b685-41ff-8666-e111b07bf008
         "><mat-icon style="font-size: 18px;">
           remove_red_eye</mat-icon></a>
-        <a href="https://firebasestorage.googleapis.com/v0/b/ransa-d8b38.appspot.com/o/reportes%2F1606484525725?alt=media&token=c1e2075a-b685-41ff-8666-e111b07bf008"></a>
-        <mat-icon  style="font-size: 18px;">arrow_downward</mat-icon>
-        <mat-icon  style="font-size: 18px;">edit</mat-icon>
+        <a href="https://firebasestorage.googleapis.com/v0/b/ransa-d8b38.appspot.com/o/reportes%2F1606484525725?alt=media&token=c1e2075a-b685-41ff-8666-e111b07bf008">
+          <mat-icon  style="font-size: 18px;">arrow_downward</mat-icon>
+        </a>
+        <a href="https://firebasestorage.googleapis.com/v0/b/ransa-d8b38.appspot.com/o/reportes%2F1606484525725?alt=media&token=c1e2075a-b685-41ff-8666-e111b07bf008">
+          <mat-icon  style="font-size: 18px;">edit</mat-icon>
+        </a>
       </div>
     </td>
   </ng-container>
