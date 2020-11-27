@@ -5,6 +5,17 @@
   h3 {
     margin: 5px;
   }
+  button {
+    padding: 5px 15px;
+    border-radius: 30px;
+    margin: 10px;
+  }
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .checkbox-container {

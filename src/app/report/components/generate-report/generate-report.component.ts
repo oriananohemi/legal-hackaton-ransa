@@ -28,13 +28,13 @@ export class GenerateReportComponent {
 
   constructor(private reportService: ReportService, private fb: FormBuilder, private router: Router) {
     this.report = this.fb.group({
-      reportante: [ this.user, Validators.required ],
-      trabajador: [ '', Validators.required ],
+      nombreJefe: [ this.user, Validators.required ],
+      nombreTrabajador: [ '', Validators.required ],
       lugar: [ '', Validators.required ],
-      fecha: [ '', Validators.required ],
+      fechaIncidencia: [ '', Validators.required ],
       hora: [ '' ],
       testigos: [ '' ],
-      estado: [ '' ],
+      equipos: [ '' ],
       relato: [ '' ],
       causas: this.fb.array([]),
       acuerdo: ['' ],

@@ -2,13 +2,13 @@
   <h3>Reportante</h3>
   <mat-form-field class="example-full-width" [style.width.px]=300>
     <mat-label>Reportante</mat-label>
-    <input matInput placeholder="Alexa Rogue" formControlName="reportante">
+    <input matInput placeholder="Alexa Rogue" formControlName="nombreJefe">
   </mat-form-field>
   <mat-divider></mat-divider>
   <h3>Involucrado</h3>
   <mat-form-field class="example-full-width" [style.width.px]=300>
     <mat-label>Involucrado</mat-label>
-    <input matInput placeholder="Trabajador 1" formControlName="trabajador">
+    <input matInput placeholder="Trabajador 1" formControlName="nombreTrabajador">
   </mat-form-field>
   <mat-divider></mat-divider>
   <h3>Lugar de los hechos</h3>
@@ -20,7 +20,7 @@
   <h3>Fecha y hora</h3>
   <mat-form-field class="example-full-width" appearance="fill" [style.width.px]=300>
     <mat-label>Choose a date</mat-label>
-    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="fecha">
+    <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" formControlName="fechaIncidencia">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
@@ -35,7 +35,7 @@
 <h3>Si los hechos involucraron equipos y/o herramientas ¿Se encontraban en buenas condiciones de operatividad y con mantenimientos al día?</h3>
 <mat-form-field appearance="fill" [style.width.px]=300>
   <mat-label>Seleccione</mat-label>
-  <mat-select formControlName="estado">
+  <mat-select formControlName="equipos">
     <mat-option value="option">Seleccione</mat-option>
     <mat-option [value]=true>si</mat-option>
     <mat-option [value]=false>no</mat-option>
@@ -62,7 +62,7 @@
 </mat-form-field>
 <mat-divider></mat-divider>
 <button type="button" mat-raised-button (click)="fileInput.click()" [style.width.px]=300>Agrega archivos</button>
-<input multiple hidden (change)="onFileSelected($event)" #fileInput type="file" id="file" formControlName="evidencia">
+<input multiple hidden (change)="onFileSelected($event)" #fileInput type="file" id="file">
 <mat-divider></mat-divider>
 <h3>Describa los medios probatorios que se adjuntan</h3>
 <mat-form-field class="example-full-width" [style.width.px]=300>
@@ -70,10 +70,12 @@
   <input matInput placeholder="Medios Probatorios" formControlName="probatorios">
 </mat-form-field>
 <mat-divider></mat-divider>
-<div class="flex-container">
-  <button mat-raised-button color="primary" (click)="generatePdf()">Visualizar</button>
-  <button mat-raised-button color="accent" (click)="save()">Finalizar</button>
-</div>
+<section class="container">
+  <div class="flex-container">
+    <button mat-raised-button color="primary" (click)="generatePdf()">Visualizar</button>
+    <button mat-raised-button color="accent" (click)="save()">Finalizar</button>
+  </div>
+</section>
 </form>
 <!-- <button type="button" mat-raised-button color="primary" (click)="goBack()">Volver</button> -->
 <mat-spinner class="spinner" *ngIf="loading === true"></mat-spinner>

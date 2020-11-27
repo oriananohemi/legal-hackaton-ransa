@@ -1,29 +1,101 @@
-<table  class="content-table">
-    <thead>
-      <tr>
-        <th>Código</th>
-        <th>Nombre</th>
-        <th>Tipo de incidencia</th>
-        <th>Días hombre perdido</th>
-        <th>Fecha de incidencia</th>
-        <th>Estado</th>
-        <th>Acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let sanction of allSanctions">
-        <td>{{sanction.codigo}}</td>
-        <td>{{sanction.nombreTrabajador}}</td>
-        <td>{{sanction.motivo}}</td>
-        <td>{{sanction.diasHombrePerdidos}}</td>
-        <td>{{sanction.fechaIncidencia}}</td>
-        <td>{{sanction.estado}}</td>
-        <td>
-          <a href="https://firebasestorage.googleapis.com/v0/b/ransa-d8b38.appspot.com/o/FormatoAntecedentes%2FFormato%20reporte%20antecedentes%20(1).docx?alt=media&token=ee2c95b3-f567-46be-bd6a-dc63b6db1526">
-            <img src="../../../assets/icons/folder.png" class="visualizar-icon">
-          </a>
-        </td>
-      </tr>
-      
-    </tbody>
-  </table>
+<div class="section-filters">
+
+  <mat-form-field style="    width: 32%; height: 73px;font-size: 16px;">
+    <mat-label style="display: flex;justify-content: space-between;font-size:100%;">Buscar <mat-icon
+        style="font-size:150%;">search</mat-icon>
+    </mat-label>
+  
+    <input matInput (keyup)="applyFilter($event)" placeholder="Nombre del empleado,codigo o estado" #input>
+  
+  </mat-form-field>
+  <div class="incidents-section-filter">
+
+    <!-- <h4>Filtrar por:</h4> -->
+    <mat-form-field appearance="fill" class="input-select">
+      <mat-label>Tipo de incidencia</mat-label>
+      <mat-select required>
+        <mat-option>--</mat-option>
+        <mat-option value="ausentismo">Ausentismo</mat-option>
+        <mat-option value="tardanzas">Tardanzas</mat-option>
+        <mat-option value="abandonos">Abandonos</mat-option>
+        <mat-option value="tmrealizado">Trabajo mal realizado</mat-option>
+        <mat-option value="segysalud">Seguridad y Salud</mat-option>
+        <mat-option value="desobediencia">Desobediencia</mat-option>
+        <mat-option value="recdinero">Recepcion de dinero o dádivas</mat-option>
+        <mat-option value="falrespeto">Falta de respeto</mat-option>
+        <mat-option value="capacitaciones">Incumplimiento de capacitaciones</mat-option>
+        <mat-option value="otros">Otros</mat-option>
+      </mat-select>      
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Estado</mat-label>
+      <mat-select [(value)]="selectedValue">
+        <mat-option>--</mat-option>
+        <mat-option value="borrador">Borrador</mat-option>
+        <mat-option value="aprobado	">Aprobado</mat-option>
+        <mat-option value="rechazado">Rechazado</mat-option>
+        <mat-option value="revision">En revision</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+  </div>
+  
+</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="codigo">
+    <th mat-header-cell *matHeaderCellDef >Código</th>
+    <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="nombreTrabajador">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+    <td mat-cell *matCellDef="let element"> {{element.nombreTrabajador}} </td>
+  </ng-container>
+
+  <!-- motivo Column -->
+  <ng-container matColumnDef="motivo">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo de incidencia </th>
+    <td mat-cell *matCellDef="let element"> {{element.motivo}} </td>
+  </ng-container>
+
+    <!-- Days Column -->
+    <ng-container matColumnDef="diasHombrePerdidos">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Dias hombre perdidos </th>
+      <td mat-cell *matCellDef="let element"> {{element.diasHombrePerdidos}} </td>
+    </ng-container>
+
+  <!-- fecha column -->
+  <ng-container matColumnDef="fechaIncidencia">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de incidencia </th>
+    <td mat-cell *matCellDef="let element"> {{element.fechaIncidencia}} </td>
+  </ng-container>
+  <!-- estado -->
+  <ng-container matColumnDef="estado">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+    <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+  </ng-container>
+
+  <!-- Acciones -->
+  <ng-container matColumnDef="acciones">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Acciones </th>
+    <td mat-cell *matCellDef="let element">
+      <a href="https://firebasestorage.googleapis.com/v0/b/ransa-d8b38.appspot.com/o/FormatoAntecedentes%2FFormato%20reporte%20antecedentes%20(1).docx?alt=media&token=ee2c95b3-f567-46be-bd6a-dc63b6db1526">
+        <img src="../../../assets/icons/folder.png" class="visualizar-icon">
+      </a>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  <!-- Row shown when there is no matching data. -->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+  </tr>
+</table>
+<mat-paginator [pageSizeOptions]="[10 , 20]" showFirstLastButtons>
+</mat-paginator>
