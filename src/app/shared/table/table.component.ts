@@ -14,12 +14,14 @@ import { MatPaginator } from '@angular/material/paginator';
 export class TableComponent implements OnInit, AfterViewInit {
 
   displayedColumns: string[] = [
-    'codigo','nombreTrabajador','motivo','fechaIncidencia','estado','acciones'
+    'codigo', 'nombreTrabajador', 'motivo', 'fechaIncidencia', 'estado', 'acciones'
   ];
   dataSource = new MatTableDataSource();
 
   selectedValue: string = '';
- 
+  valIncidence:string='';
+  allSanctions: any = [];
+
   constructor(private sanctions$: SanctionsService) { }
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -27,46 +29,51 @@ export class TableComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
-    
+
     this.sanctions$.getAllSanctions().subscribe(sanctions => {
-      this.dataSource.data = sanctions;
+      this.allSanctions = sanctions;
+      this.asignDataFb()
       this.onSelectStatus(this.selectedValue);
+      this.onSelectIncidence(this.valIncidence);
     })
 
-    
   }
 
   onSelectStatus(status) {
-    //if (this.selectedValue !== '') {
-     let aprobados:any= [];
+    this.asignDataFb()
+    if (status !== '') {
 
-      if(status !== ''){
-        for(let item of this.dataSource.data){
-          const estado =item.estado;
-          if(estado=='Aprobado'){
-            aprobados.push(item)
-            console.log(aprobados);
-            console.log(estado);
-            
-            
-          }
+      let approved = this.dataSource.data
+        .filter((item: any) => item.estado.toLowerCase() === status);
 
+      this.dataSource.data = approved;
+
+      if (status == 'ninguno') {
+        this.asignDataFb()
       }
-       console.log(status);
-          switch (status) {
-          case 'aprobado':
+    }
+  }
+  onSelectIncidence(incidence){
+    //this.asignDataFb()
+    if (incidence !== '') {
 
-            this.dataSource.data = aprobados;
-            console.log(aprobados);
-            break;
+      let approved = this.dataSource.data
+        .filter((item: any) =>
           
-          default:
-            console.log('Lo lamentamo');
-        }
-      }
-      
-     
+          item.motivo.toLowerCase() === incidence);
 
+      this.dataSource.data = approved;
+
+      if (status == 'ninguno') {
+        this.asignDataFb()
+      }
+    }
+    console.log('incidence', incidence);
+    
+  }
+
+  asignDataFb() {
+    return this.dataSource.data = this.allSanctions
   }
 
   ngAfterViewInit() {
