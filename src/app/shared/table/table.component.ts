@@ -34,6 +34,7 @@ export class TableComponent implements OnInit, AfterViewInit {
       this.asignDataFb()
       this.onSelectStatus(this.selectedValue);
       this.onSelectIncidence(this.valIncidence);
+      console.log(sanctions)
     })
 
   }
@@ -71,7 +72,8 @@ export class TableComponent implements OnInit, AfterViewInit {
   }
 
   asignDataFb() {
-    return this.dataSource.data = this.allSanctions
+    console.log(this.allSanctions)
+    return this.dataSource.data = this.allSanctions;
   }
 
   ngAfterViewInit() {

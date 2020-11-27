@@ -31,7 +31,6 @@ export class GenerateReportComponent {
       nombreJefe: [ this.user, Validators.required ],
       nombreTrabajador: [ '', Validators.required ],
       lugar: [ '', Validators.required ],
-      fechaIncidencia: [ '', Validators.required ],
       hora: [ '' ],
       testigos: [ '' ],
       equipos: [ '' ],
