@@ -39,7 +39,7 @@ export class AuthComponent implements OnInit {
         .login(value.email, value.password)
         .then(() => {
           localStorage.setItem('user', value.email);
-          if (value.email === 'jefe1@gmail.com') {
+          if (value.email === 'jefe1@gmail.com' || value.email === 'jefe1@ransa.com' ) {
             this.router.navigate(['/main'])
             const swalButtons = Swal.mixin({
               customClass: {
