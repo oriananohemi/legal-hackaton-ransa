@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -15,9 +17,24 @@ export class HeaderComponent implements OnInit {
 
   notification = 'assets/images/t-icon.png';
 
-  constructor() { }
+  show = false;
+
+  constructor(private authService: AuthService,  private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  option() {
+    if (this.show === false) {
+      this.show = true;
+    } else {
+      this.show = false;
+    }
+  }
+
+  logout() {
+    localStorage.removeItem('user');
+    this.authService.logout();
+    this.router.navigate(['/auth']);
+  }
 }

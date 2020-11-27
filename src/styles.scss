@@ -8,6 +8,7 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -39,6 +40,10 @@ li {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+.title {
+  color: $main-color;
+  font-size: 25px;
 }
 
 .subtitle {
