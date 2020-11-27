@@ -49,7 +49,7 @@ export const info = (report) => {
 
           - Personal involucrado: ${report.nombreTrabajador}
           - Fecha y hora de ocurrencia del evento: xxx
-          - Fecha y hora de detección del evento: ${report.fechaIncidencia.toLocaleString()}
+          - Fecha y hora de detección del evento: ${report.fechaIncidencia}
           - Lugar del evento: ${report.lugar}
           - Descripción del evento: ${report.relato}
 
