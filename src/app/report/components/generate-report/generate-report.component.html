@@ -70,10 +70,12 @@
   <input matInput placeholder="Medios Probatorios" formControlName="probatorios">
 </mat-form-field>
 <mat-divider></mat-divider>
-<div class="flex-container">
-  <button mat-raised-button color="primary" (click)="generatePdf()">Visualizar</button>
-  <button mat-raised-button color="accent" (click)="save()">Finalizar</button>
-</div>
+<section class="container">
+  <div class="flex-container">
+    <button mat-raised-button color="primary" (click)="generatePdf()">Visualizar</button>
+    <button mat-raised-button color="accent" (click)="save()">Finalizar</button>
+  </div>
+</section>
 </form>
 <!-- <button type="button" mat-raised-button color="primary" (click)="goBack()">Volver</button> -->
 <mat-spinner class="spinner" *ngIf="loading === true"></mat-spinner>
