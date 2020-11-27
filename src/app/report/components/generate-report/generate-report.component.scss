@@ -66,3 +66,9 @@ input[type="time"]::-webkit-inner-spin-button {
 mat-form-field {
   margin: 20px 0;
 }
+
+.spinner {
+  position: fixed;
+  top: 10%;
+  right: 50%;
+}

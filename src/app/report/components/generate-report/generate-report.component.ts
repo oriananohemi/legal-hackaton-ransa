@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ReportService } from 'src/app/core/services/report-service/report.service';
+import Swal from 'sweetalert2';
 import {causes} from '../../../core/services/check/check.constant';
 
 @Component({
@@ -10,6 +12,8 @@ import {causes} from '../../../core/services/check/check.constant';
 })
 export class GenerateReportComponent {
   @Output() eventEmit = new EventEmitter<void>();
+
+  loading: boolean = false;
 
   report: FormGroup;
 
@@ -22,7 +26,7 @@ export class GenerateReportComponent {
   minDate: Date;
   maxDate: Date;
 
-  constructor(private reportService: ReportService, private fb: FormBuilder) {
+  constructor(private reportService: ReportService, private fb: FormBuilder, private router: Router) {
     this.report = this.fb.group({
       reportante: [ this.user, Validators.required ],
       trabajador: [ '', Validators.required ],
@@ -34,7 +38,6 @@ export class GenerateReportComponent {
       relato: [ '' ],
       causas: this.fb.array([]),
       acuerdo: ['' ],
-      evidencia: [ '' ],
       probatorios: [ '' ],
     });
     const currentYear = new Date().getFullYear();
@@ -44,9 +47,6 @@ export class GenerateReportComponent {
 
   generatePdf() {
     this.reportService.generatePdf('open', this.report.value );
-    if (this.file) {
-      this.reportService.onFileSelected(this.file);
-    }
   }
 
   addCause(value: string, checked: boolean) {
@@ -59,10 +59,19 @@ export class GenerateReportComponent {
   }
 
   save() {
-    this.reportService.save(this.report.value);
+    this.loading = true;
+    this.reportService.save(this.report.value, this.file)
+    .then(() => {
+      this.loading = false;
+      Swal.fire({
+        title: 'Se ha registrado la incidencia exitosamente',
+        cancelButtonText: 'Ver',
+        confirmButtonColor: '#009A3F',
+      });
+      this.router.navigate(['/main']);
+    });
   }
   onFileSelected($event) {
     this.file = $event.target.files[0];
-    console.log(this.file)
   }
 }
