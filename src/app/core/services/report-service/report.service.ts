@@ -13,7 +13,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export class ReportService {
   private incidenceCollection: AngularFirestoreCollection;
   constructor(private storage: AngularFireStorage, private afs: AngularFirestore) {
-    this.incidenceCollection = this.afs.collection('sanciones');
+    this.incidenceCollection = this.afs.collection('reportes');
   }
 
   generatePdf(action, sancion) {
@@ -68,9 +68,8 @@ export class ReportService {
   async save(incidence, file) {
     const fileURL = await this.onFileSelected(file);
     const reportURL = await this.updloadBlob(incidence);
-    const newIncidence = { ...incidence, fileURL, reportURL};
     const id = this.afs.createId();
-    console.log(newIncidence)
+    const newIncidence = { ...incidence, id, fileURL, reportURL, estado: 'en revision'};
     return this.incidenceCollection.doc(id).set(newIncidence);
   }
 }

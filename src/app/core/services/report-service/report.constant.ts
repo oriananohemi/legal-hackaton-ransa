@@ -30,7 +30,7 @@ export const info = (report) => {
           margin: [10, 20]
         },
         {
-          text: `De: ${report.reportante} `,
+          text: `De: ${report.nombreJefe} `,
           style: 'content'
         },
         {
@@ -47,9 +47,9 @@ export const info = (report) => {
 
           Mediante la presente, procedo a informar el incidente sucitado, según el detalle siguiente:
 
-          - Personal involucrado: ${report.trabajador}
+          - Personal involucrado: ${report.nombreTrabajador}
           - Fecha y hora de ocurrencia del evento: xxx
-          - Fecha y hora de detección del evento: ${report.fecha.toLocaleString()}
+          - Fecha y hora de detección del evento: ${report.fechaIncidencia.toLocaleString()}
           - Lugar del evento: ${report.lugar}
           - Descripción del evento: ${report.relato}
 
