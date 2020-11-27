@@ -15,15 +15,13 @@
       <mat-label>Tipo de incidencia</mat-label>
       <mat-select [(value)]="selectedIncidence" (valueChange)="onSelectIncidence(valIncidence.value)" #valIncidence>
         <mat-option value="ninguno">--</mat-option>
-        <mat-option value="ausentismo">Ausentismo</mat-option>
-        <mat-option value="tardanzas">Tardanzas</mat-option>
-        <mat-option value="abandonos">Abandonos</mat-option>
+        <mat-option value="ausentismo, tardanzas y abandonos">Ausentismo, tardanzas y abandonos</mat-option>
         <mat-option value="trabajo mal realizado">Trabajo mal realizado</mat-option>
-        <mat-option value="seguridad y salud">Seguridad y Salud</mat-option>
+        <mat-option value="temas vinculados a seguridad y salud en el trabajo">Seguridad y Salud</mat-option>
         <mat-option value="desobediencia">Desobediencia</mat-option>
-        <mat-option value="recepcion de dinero o dadivas">Recepcion de dinero o dadivas</mat-option>
+        <mat-option value="recepcion de dinero o dádivas">Recepcion de dinero o dadivas</mat-option>
         <mat-option value="falta de respeto">Falta de respeto</mat-option>
-        <mat-option value="incumplimiento de capacitaciones">Incumplimiento de capacitaciones</mat-option>
+        <mat-option value="incumplimiento de capacitaciones obligatorias">Incumplimiento de capacitaciones</mat-option>
         <mat-option value="otros">Otros</mat-option>
       </mat-select>      
     </mat-form-field>
