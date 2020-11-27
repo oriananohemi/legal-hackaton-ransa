@@ -13,25 +13,23 @@
     <!-- <h4>Filtrar por:</h4> -->
     <mat-form-field appearance="fill" class="input-select">
       <mat-label>Tipo de incidencia</mat-label>
-      <mat-select required>
-        <mat-option>--</mat-option>
-        <mat-option value="ausentismo">Ausentismo</mat-option>
-        <mat-option value="tardanzas">Tardanzas</mat-option>
-        <mat-option value="abandonos">Abandonos</mat-option>
-        <mat-option value="tmrealizado">Trabajo mal realizado</mat-option>
-        <mat-option value="segysalud">Seguridad y Salud</mat-option>
+      <mat-select [(value)]="selectedIncidence" (valueChange)="onSelectIncidence(valIncidence.value)" #valIncidence>
+        <mat-option value="ninguno">--</mat-option>
+        <mat-option value="ausentismo, tardanzas y abandonos">Ausentismo, tardanzas y abandonos</mat-option>
+        <mat-option value="trabajo mal realizado">Trabajo mal realizado</mat-option>
+        <mat-option value="temas vinculados a seguridad y salud en el trabajo">Seguridad y Salud</mat-option>
         <mat-option value="desobediencia">Desobediencia</mat-option>
-        <mat-option value="recdinero">Recepcion de dinero o dádivas</mat-option>
-        <mat-option value="falrespeto">Falta de respeto</mat-option>
-        <mat-option value="capacitaciones">Incumplimiento de capacitaciones</mat-option>
+        <mat-option value="recepcion de dinero o dádivas">Recepcion de dinero o dadivas</mat-option>
+        <mat-option value="falta de respeto">Falta de respeto</mat-option>
+        <mat-option value="incumplimiento de capacitaciones obligatorias">Incumplimiento de capacitaciones</mat-option>
         <mat-option value="otros">Otros</mat-option>
       </mat-select>      
     </mat-form-field>
 
     <mat-form-field appearance="fill">
       <mat-label>Estado</mat-label>
-      <mat-select [(value)]="selectedValue">
-        <mat-option>--</mat-option>
+      <mat-select [(value)]="selectedValue" (valueChange)="onSelectStatus(val.value)" #val>
+        <mat-option value="ninguno">--</mat-option>
         <mat-option value="borrador">Borrador</mat-option>
         <mat-option value="aprobado	">Aprobado</mat-option>
         <mat-option value="rechazado">Rechazado</mat-option>

@@ -17,6 +17,9 @@ export class TableLaboralComponent implements OnInit {
   dataSource = new MatTableDataSource();
 
   selectedValue: string = '';
+  allSanctions: any = [];
+  valIncidence: any;
+
  
   constructor(private sanctions$: SanctionsService) { }
 
@@ -26,19 +29,51 @@ export class TableLaboralComponent implements OnInit {
 
   ngOnInit(): void {
     this.sanctions$.getAllSanctions().subscribe(sanctions => {
-      this.dataSource.data = sanctions;
+      this.allSanctions = sanctions;
+      this.asignDataFb()
     })
 
-    this.onSelectStatus();
+    this.onSelectStatus(this.selectedValue);
+    this.onSelectIncidence(this.valIncidence);
   }
 
-  onSelectStatus() {
-    if (this.selectedValue !== '') {
-      console.log(this.selectedValue);
+ 
+  onSelectStatus(status) {
+    this.asignDataFb()
+    if (status !== '') {
 
+      let approved = this.dataSource.data
+        .filter((item: any) => item.estado.toLowerCase() === status);
+
+      this.dataSource.data = approved;
+
+      if (status == 'ninguno') {
+        this.asignDataFb()
+      }
     }
-
   }
+
+  onSelectIncidence(incidence){
+    this.asignDataFb()
+    if (incidence !== '') {
+
+      let incidenceItem = this.dataSource.data
+        .filter((item: any) =>
+          
+          item.motivo.toLowerCase() === incidence);
+
+      this.dataSource.data = incidenceItem ;
+
+      if (incidence == 'ninguno') {
+        this.asignDataFb()
+      }
+    }
+  }
+
+  asignDataFb() {
+    return this.dataSource.data = this.allSanctions
+  }
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;

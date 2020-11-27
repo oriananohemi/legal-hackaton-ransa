@@ -53,21 +53,20 @@ export class TableComponent implements OnInit, AfterViewInit {
     }
   }
   onSelectIncidence(incidence){
-    //this.asignDataFb()
+    this.asignDataFb()
     if (incidence !== '') {
 
-      let approved = this.dataSource.data
+      let incidenceItem = this.dataSource.data
         .filter((item: any) =>
           
           item.motivo.toLowerCase() === incidence);
 
-      this.dataSource.data = approved;
+      this.dataSource.data = incidenceItem ;
 
-      if (status == 'ninguno') {
+      if (incidence == 'ninguno') {
         this.asignDataFb()
       }
     }
-    console.log('incidence', incidence);
     
   }
 
