@@ -7,6 +7,15 @@ import { TableComponent } from './table/table.component';
 import { ChartComponent } from './chart/chart.component';
 import { Chart2Component } from './chart2/chart2.component';
 import { ChartsModule } from 'ng2-charts';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+const materialModules = [
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule
+];
 
 @NgModule({
   declarations: [
@@ -19,13 +28,15 @@ import { ChartsModule } from 'ng2-charts';
     CommonModule,
     MaterialModule,
     ChartsModule,
-    RouterModule
+    RouterModule,
+    materialModules
   ],
   exports: [
     HeaderComponent,
     TableComponent,
     ChartComponent,
-    Chart2Component
+    Chart2Component,
+    materialModules
   ]
 })
 export class SharedModule { }

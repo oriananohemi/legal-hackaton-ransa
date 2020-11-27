@@ -1,11 +1,18 @@
 @import "../../../styles.scss";
-
+*{
+  text-align: center;
+}
 table {
   width: 100%;
 }
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
 .content-table {
   border-collapse: collapse;
-  font-size: 0.9em;
+  font-size: 16px;
   min-width: 100%;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
@@ -23,9 +30,18 @@ tr {
 
 .content-table tbody tr {
   border-bottom: 1px solid $gray-clear;
-  td {
-    img {
-      font-size: 15px;
-    }
+  padding-left: 5%;
+  padding-right: 5%;
+  td{
+    padding: 2%;
   }
+}
+
+     .icons-actions{
+       display: flex;
+       justify-content: space-between;
+       img{
+         height: 20px;
+       }
+     
 }
