@@ -23,6 +23,19 @@ export class ReportService {
       default: return pdfMake.createPdf(documentDefinition).open();
     }
   }
+  onFileSelected() {
+      const inputNode: any = document.querySelector('#file');
+    
+      if (typeof (FileReader) !== 'undefined') {
+        // const reader = new FileReader();
+    
+        // reader.onload = (e: any) => {
+        //   this.srcResult = e.target.result;
+        // };
+    
+        // reader.readAsArrayBuffer(inputNode.files[0]);
+      }
+    }
 
   save(sancion) {
     console.log(sancion)

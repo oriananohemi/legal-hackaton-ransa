@@ -75,5 +75,6 @@ export const causes = [
   'No usar EPP',
   'Peatones temerarios',
   'Inadecuada coordinacion',
+  'Negligencia del colaborador',
   'Otros'
 ]

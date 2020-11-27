@@ -12,7 +12,7 @@ export class FirestoreService {
 
   constructor(
     private fs: AngularFirestore,
-  ) { 
+  ) {
     this.data$ = this.fs.collection('sanciones').valueChanges() as Observable<Data[]>;
   }
 
