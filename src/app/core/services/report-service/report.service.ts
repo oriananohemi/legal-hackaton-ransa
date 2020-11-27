@@ -68,8 +68,9 @@ export class ReportService {
   async save(incidence, file) {
     const fileURL = await this.onFileSelected(file);
     const reportURL = await this.updloadBlob(incidence);
+    const option = localStorage.getItem('option')
     const id = this.afs.createId();
-    const newIncidence = { ...incidence, id, fileURL, reportURL, estado: 'en revision'};
+    const newIncidence = { ...incidence, id, fileURL, reportURL, estado: 'en revision', motivo: option, codigo: (Math.random() * (9 - 1) + 1).toFixed(3)};
     return this.incidenceCollection.doc(id).set(newIncidence);
   }
 }

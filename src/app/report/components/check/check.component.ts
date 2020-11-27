@@ -3,10 +3,7 @@ import { CheckService } from 'src/app/core/services/check/check.service';
 import { incidences } from '../../../core/definitions/report.model';
 import {
   MatSnackBar,
-  MatSnackBarHorizontalPosition,
-  MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
-import { message } from 'src/app/core/services/check/check.constant';
 import Swal from 'sweetalert2';
 import { FormControl } from '@angular/forms';
 
@@ -30,6 +27,7 @@ export class CheckComponent {
 
     getQuestionsFromIncidence(selected) {
       this.questions = this.checkService.getQuestionsFromIncidence(selected);
+      localStorage.setItem('option', selected);
       this.currentQuestion = 0;
       this.show = true;
     }

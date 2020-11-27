@@ -62,7 +62,7 @@ export const info = (report) => {
 
 
 
-          ${report.reportante}
+          ${report.nombreJefe}
           NOMBRE Y FIRMA DEL REPORTANTE
           `,
           style: 'content'
