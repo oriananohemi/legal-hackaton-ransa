@@ -30,7 +30,7 @@
 
     <mat-form-field appearance="fill">
       <mat-label>Estado</mat-label>
-      <mat-select [(value)]="selectValue">
+      <mat-select  [(value)]="selectValue" (valueChange)="onSelectStatus(val.value)" #val>
         <mat-option>--</mat-option>
         <mat-option value="borrador">Borrador</mat-option>
         <mat-option value="aprobado	">Aprobado</mat-option>
@@ -47,39 +47,41 @@
   <!-- Position Column -->
   <ng-container matColumnDef="codigo">
     <th mat-header-cell *matHeaderCellDef >Código</th>
-    <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+    <td mat-cell *matCellDef="let element" style="color: rgba(0, 0, 0, 0.54);"> {{element.codigo}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="nombreTrabajador">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
-    <td mat-cell *matCellDef="let element"> {{element.nombreTrabajador}} </td>
+    <td mat-cell *matCellDef="let element" style="color: rgba(0, 0, 0, 0.54);"> {{element.nombreTrabajador}} </td>
   </ng-container>
 
   <!-- motivo Column -->
   <ng-container matColumnDef="motivo">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo de incidencia </th>
-    <td mat-cell *matCellDef="let element"> {{element.motivo}} </td>
+    <td mat-cell *matCellDef="let element"  style="color: rgba(0, 0, 0, 0.54);"> {{element.motivo}} </td>
   </ng-container>
 
   <!-- fecha column -->
   <ng-container matColumnDef="fechaIncidencia">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de incidencia </th>
-    <td mat-cell *matCellDef="let element"> {{element.fechaIncidencia}} </td>
+    <td mat-cell *matCellDef="let element"  style="color: rgba(0, 0, 0, 0.54);"> {{element.fechaIncidencia}} </td>
   </ng-container>
   <!-- estado -->
   <ng-container matColumnDef="estado">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
-    <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+    <td mat-cell *matCellDef="let element"  style="color: rgba(0, 0, 0, 0.54);"> {{element.estado}} </td>
   </ng-container>
 
   <!-- Acciones -->
   <ng-container matColumnDef="acciones">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Acciones </th>
+    <th mat-header-cell *matHeaderCellDef> Acciones </th>
     <td mat-cell *matCellDef="let element">
-      <mat-icon>remove_red_eye</mat-icon>
-      <mat-icon>arrow_downward</mat-icon>
-      <mat-icon>edit</mat-icon>
+      <div class="actions-icons" style="margin-left: 8%;color: rgba(0, 0, 0, 0.54);">
+        <mat-icon style="font-size: 18px;">remove_red_eye</mat-icon>
+        <mat-icon  style="font-size: 18px;">arrow_downward</mat-icon>
+        <mat-icon  style="font-size: 18px;">edit</mat-icon>
+      </div>
     </td>
   </ng-container>
 
@@ -93,3 +95,4 @@
 </table>
 <mat-paginator [pageSizeOptions]="[10 , 20]" showFirstLastButtons>
 </mat-paginator>
+<footer></footer>
