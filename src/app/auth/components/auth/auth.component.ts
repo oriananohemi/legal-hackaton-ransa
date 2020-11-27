@@ -41,7 +41,14 @@ export class AuthComponent implements OnInit {
           localStorage.setItem('user', value.email);
           if (value.email === 'jefe1@gmail.com') {
             this.router.navigate(['/main'])
-            Swal.fire({
+            const swalButtons = Swal.mixin({
+              customClass: {
+                confirmButton: 'btn btn-success',
+                cancelButton: 'btn btn-danger'
+              },
+              buttonsStyling: false
+            })
+            swalButtons.fire({
               title: '¡Bienvenido(a) a tu plataforma de disciplina laboral!',
               html:
               '<video width=400 src="https://firebasestorage.googleapis.com/v0/b/ransa-d8b38.appspot.com/o/WhatsApp%20Video%202020-11-24%20at%209.07.41%20AM.mp4?alt=media&token=bd024ad9-0701-4998-abfd-51ba3ed9e047" autoplay controls></video>' +

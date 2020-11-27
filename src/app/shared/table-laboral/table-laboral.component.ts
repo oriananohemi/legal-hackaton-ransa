@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SanctionsService } from 'src/app/core/services/sanctions/sanctions.service';
-import { ReportService } from 'src/app/core/services/report-service/report.service';
+// import { BackgroundService } from 'src/app/core/services/background/background.service';
 
 @Component({
   selector: 'app-table-laboral',
@@ -11,7 +11,7 @@ export class TableLaboralComponent implements OnInit {
   allSanctions:any;
 
   constructor(
-    private reportService: ReportService,
+    // private backgroundService: BackgroundService,
     private sanctions$: SanctionsService
   ) { 
   }
@@ -19,14 +19,13 @@ export class TableLaboralComponent implements OnInit {
   ngOnInit(): void {
     this.sanctions$.getAllSanctions().subscribe(sanctions =>{
       this.allSanctions = sanctions;
-      this.allSanctions.map(p=>console.log(p.nombreTrabajador))
     })
   }
 
   
 
-  generateReport() {
-    this.reportService.generatePdf('download', this.allSanctions );
-  }
+  // generateReport() {
+  //   this.backgroundService.download();
+  // }
 
 }

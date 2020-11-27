@@ -5,13 +5,14 @@ import {LaboralRoutingModule} from './laboral-routing.module'
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../material/material.module';
 
+
 @NgModule({
   declarations: [LaboralComponent],
   imports: [
     CommonModule,
     LaboralRoutingModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
   ]
 })
 export class LaboralModule { }
