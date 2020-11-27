@@ -1,0 +1,141 @@
+{
+  "configVersion": 1,
+  "timestamp": 1606488671093,
+  "index": "/legal-hackaton-ransa/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/legal-hackaton-ransa/1.e807b122c900197f0671.js",
+        "/legal-hackaton-ransa/6.86fece28f7e3262e4fd8.js",
+        "/legal-hackaton-ransa/7.f9a23b5c94ca7bff6952.js",
+        "/legal-hackaton-ransa/8.d9168b285c5ebade8ac7.js",
+        "/legal-hackaton-ransa/9.28f8e0024e2057b5ed00.js",
+        "/legal-hackaton-ransa/common.7b25800affda3d277170.js",
+        "/legal-hackaton-ransa/favicon.ico",
+        "/legal-hackaton-ransa/index.html",
+        "/legal-hackaton-ransa/main.fd775011db5a94ed6726.js",
+        "/legal-hackaton-ransa/manifest.webmanifest",
+        "/legal-hackaton-ransa/polyfills.a5e0970f64dcd08f5d60.js",
+        "/legal-hackaton-ransa/runtime.d9494d8509442c39d1b7.js",
+        "/legal-hackaton-ransa/styles.d619d227c400dd1ff37a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/legal-hackaton-ransa/UniviaPro-Regular.bf2d8fa8139d44006a37.otf",
+        "/legal-hackaton-ransa/assets/fonts/UniviaPro-Black.otf",
+        "/legal-hackaton-ransa/assets/fonts/UniviaPro-Bold.otf",
+        "/legal-hackaton-ransa/assets/fonts/UniviaPro-Book.otf",
+        "/legal-hackaton-ransa/assets/fonts/UniviaPro-Light.otf",
+        "/legal-hackaton-ransa/assets/fonts/UniviaPro-Regular.otf",
+        "/legal-hackaton-ransa/assets/icons/icon-128x128.png",
+        "/legal-hackaton-ransa/assets/icons/icon-144x144.png",
+        "/legal-hackaton-ransa/assets/icons/icon-152x152.png",
+        "/legal-hackaton-ransa/assets/icons/icon-192x192.png",
+        "/legal-hackaton-ransa/assets/icons/icon-384x384.png",
+        "/legal-hackaton-ransa/assets/icons/icon-512x512.png",
+        "/legal-hackaton-ransa/assets/icons/icon-72x72.png",
+        "/legal-hackaton-ransa/assets/icons/icon-96x96.png",
+        "/legal-hackaton-ransa/assets/images/EMPRESA_.jpg",
+        "/legal-hackaton-ransa/assets/images/descargar.svg",
+        "/legal-hackaton-ransa/assets/images/favicon.ico",
+        "/legal-hackaton-ransa/assets/images/jefeOperaciones.jpeg",
+        "/legal-hackaton-ransa/assets/images/lapiz.svg",
+        "/legal-hackaton-ransa/assets/images/megaphone-icon.png",
+        "/legal-hackaton-ransa/assets/images/profile-icon.png",
+        "/legal-hackaton-ransa/assets/images/ransa-logo.png",
+        "/legal-hackaton-ransa/assets/images/t-icon.png",
+        "/legal-hackaton-ransa/assets/images/ver.svg",
+        "/legal-hackaton-ransa/assets/img/Frame 230.png",
+        "/legal-hackaton-ransa/assets/img/Group 222.png",
+        "/legal-hackaton-ransa/assets/img/eye-1915454_640.png",
+        "/legal-hackaton-ransa/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+        "/legal-hackaton-ransa/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+        "/legal-hackaton-ransa/fontawesome-webfont.8b43027f47b20503057d.eot",
+        "/legal-hackaton-ransa/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+        "/legal-hackaton-ransa/fontawesome-webfont.f691f37e57f04c152e23.woff"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/legal-hackaton-ransa/1.e807b122c900197f0671.js": "be09ab69ed6a0b00f295402189160c48427b60d1",
+    "/legal-hackaton-ransa/6.86fece28f7e3262e4fd8.js": "889869d3b921ea98e807092a3ab4d123eb724bc7",
+    "/legal-hackaton-ransa/7.f9a23b5c94ca7bff6952.js": "6122a9bf74c0822192670c2a679c3067c9fe8e13",
+    "/legal-hackaton-ransa/8.d9168b285c5ebade8ac7.js": "3d504a2a7c3475277abdf4f03855554b3cf64eaa",
+    "/legal-hackaton-ransa/9.28f8e0024e2057b5ed00.js": "ecf6c1c6bb6bc33b4b5ddc364f609c4278a28a26",
+    "/legal-hackaton-ransa/UniviaPro-Regular.bf2d8fa8139d44006a37.otf": "824c2f991d1fd775bae6ca7ca0a1aa6662bc88d5",
+    "/legal-hackaton-ransa/assets/fonts/UniviaPro-Black.otf": "612eaa1145eb0d684a5da3be6347808b36013d4b",
+    "/legal-hackaton-ransa/assets/fonts/UniviaPro-Bold.otf": "e7790f1d145e31afb779657c2f26777fdde98506",
+    "/legal-hackaton-ransa/assets/fonts/UniviaPro-Book.otf": "9aa3baaad13aa8caf8a80ca05e8aea76b72c7e5a",
+    "/legal-hackaton-ransa/assets/fonts/UniviaPro-Light.otf": "8588da1fb49c63837987eaa0cf94a18225bfa8b4",
+    "/legal-hackaton-ransa/assets/fonts/UniviaPro-Regular.otf": "824c2f991d1fd775bae6ca7ca0a1aa6662bc88d5",
+    "/legal-hackaton-ransa/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/legal-hackaton-ransa/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/legal-hackaton-ransa/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/legal-hackaton-ransa/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/legal-hackaton-ransa/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/legal-hackaton-ransa/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/legal-hackaton-ransa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/legal-hackaton-ransa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/legal-hackaton-ransa/assets/images/EMPRESA_.jpg": "e1320eccd0d7c6d828832ad46b26bb937572d7b5",
+    "/legal-hackaton-ransa/assets/images/descargar.svg": "c2481eadc1bb35e5f438852a417739c579fd8210",
+    "/legal-hackaton-ransa/assets/images/favicon.ico": "b02ff426d2d70738a70f2fd74a8597f04adaff1c",
+    "/legal-hackaton-ransa/assets/images/jefeOperaciones.jpeg": "5b31cdd23fa2ccb79c5d3093dc240531af2f0836",
+    "/legal-hackaton-ransa/assets/images/lapiz.svg": "0d07f63bc4c0de2b2db2c08fbcdebf8414ae6d1a",
+    "/legal-hackaton-ransa/assets/images/megaphone-icon.png": "9cb8a8c757c230dbe11405f7f8f4f3a055741f32",
+    "/legal-hackaton-ransa/assets/images/profile-icon.png": "26882a54a9ceac58425793274396bbf65152a747",
+    "/legal-hackaton-ransa/assets/images/ransa-logo.png": "31367f9cb19eda45401036226d2663060707687f",
+    "/legal-hackaton-ransa/assets/images/t-icon.png": "3fdb46d2abc2b184cc6c1d2914725366b0400ca1",
+    "/legal-hackaton-ransa/assets/images/ver.svg": "6d9319c128a1bc41fbe24575faf49133ddbdd64f",
+    "/legal-hackaton-ransa/assets/img/Frame 230.png": "e202b0b41c93653ebfa439abd7d8ea94642b323d",
+    "/legal-hackaton-ransa/assets/img/Group 222.png": "6131f6a7e42a572bf507dac82105ec0d5289393d",
+    "/legal-hackaton-ransa/assets/img/eye-1915454_640.png": "37c1f17eabcd60045d52dc9bd5f88c9569ca9542",
+    "/legal-hackaton-ransa/common.7b25800affda3d277170.js": "5407c497bae36d850a5eeafd53fd024e7a5c47c1",
+    "/legal-hackaton-ransa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/legal-hackaton-ransa/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
+    "/legal-hackaton-ransa/fontawesome-webfont.20fd1704ea223900efa9.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
+    "/legal-hackaton-ransa/fontawesome-webfont.8b43027f47b20503057d.eot": "d980c2ce873dc43af460d4d572d441304499f400",
+    "/legal-hackaton-ransa/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
+    "/legal-hackaton-ransa/fontawesome-webfont.f691f37e57f04c152e23.woff": "28b782240b3e76db824e12c02754a9731a167527",
+    "/legal-hackaton-ransa/index.html": "0ff0ca670c944c7f8093d22b0f22ad391a6c697e",
+    "/legal-hackaton-ransa/main.fd775011db5a94ed6726.js": "8ff056ed5092f46716ed1a1f28650a0ea6748e2b",
+    "/legal-hackaton-ransa/manifest.webmanifest": "e072415e10c127ffe53eae4a3751e3a321a0a5e1",
+    "/legal-hackaton-ransa/polyfills.a5e0970f64dcd08f5d60.js": "8423e1852a4498e3f1da37dded9a4e619a769484",
+    "/legal-hackaton-ransa/runtime.d9494d8509442c39d1b7.js": "7d28fc038d957dc4e046c46a466dae87d575cc59",
+    "/legal-hackaton-ransa/styles.d619d227c400dd1ff37a.css": "f579d31df3965a3269dde43036573c7b102003e7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
