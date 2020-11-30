@@ -19,7 +19,7 @@ Crear una plataforma virtual, enfocada en la operación (supervisores y jefes) q
 
 [Demo del Proyecto](https://oriananohemi.github.io/legal-hackaton-ransa/auth)
 
-Para ingresar puedes ingresar al demo con el correo: *jefe1@ransa.com* con la contraseña: _123456789_
+Ingresa a la plataforma con el correo: *jefe1@ransa.com* con la contraseña: _123456789_
 
 ### Equipo
 
