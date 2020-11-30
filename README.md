@@ -1,27 +1,54 @@
-# Ransa
+<p align="center">
+<img width=80% src="./src/assets/images/ransa-logo.png">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
+### Descripcion del reto
 
-## Development server
+Crear una plataforma virtual, enfocada en la operación (supervisores y jefes) que requieren la aplicación de disciplina laboral, en la cual un usuario acreditado con una contraseña pueda:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Incorporar la información de la persona o personas involucradas, los jefes y supervisores, los hechos y circunstancias, los medios probatorios, antecedentes, entre otros datos.
+- Informarse de datos importantes de disciplina laboral durante la interacción con la plataforma.
 
-## Code scaffolding
+### Demo del proyecto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Este proyecto fue realizado con [Angular](https://github.com/angular/angular-cli) version 10.1.7**
 
-## Build
+<img width=300 src="./src/assets/images/Screenshot from 2020-11-30 11-35-39.png">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<img width=300 src="./src/assets/images/Screenshot from 2020-11-30 11-35-47.png">
 
-## Running unit tests
+[Demo del Proyecto](https://oriananohemi.github.io/legal-hackaton-ransa/auth)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para ingresar puedes ingresar al demo con el correo: *jefe1@ransa.com* con la contraseña: _123456789_
 
-## Running end-to-end tests
+### Equipo
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<div style="display: flex">
+<figure>
+<img width=300 src="./src/assets/images/dulce.jpeg">
+<figcaption>
+  <a href="https://github.com/soydulceangelina">Dulce Mercado</a>
+</figcaption>
+</figure><figure>
+<img width=300 src="./src/assets/images/milagros.jpeg">
+<figcaption>
+  <a href="https://github.com/MilagrosRn">Milagros Rodriguez</a>
+</figcaption>
+</figure><figure>
+<img width=300 src="./src/assets/images/oriana.jpeg">
+<figcaption>
+  <a href="https://github.com/oriananohemi">Oriana Reina</a>
+</figcaption>
+</figure><figure>
+<img width=300 src="./src/assets/images/leslie.jpeg">
+<figcaption>
+  <a href="https://www.linkedin.com/in/lesliebenel/">Leslie Bernel</a>
+</figcaption>
+</figure>
 
-## Further help
+</div>
+### Proyecto realizado para Legal Hackaton - Laboratoria 2020
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<p align="center">
+  <img width=80% src="./src/assets/images/legal-hackaton-logo.png">
+</p>
