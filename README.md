@@ -13,9 +13,9 @@ Crear una plataforma virtual, enfocada en la operación (supervisores y jefes) q
 
 **Este proyecto fue realizado con [Angular](https://github.com/angular/angular-cli) version 10.1.7**
 
-<img width=300 src="./src/assets/images/Screenshot from 2020-11-30 11-35-39.png">
+<img width=400 src="./src/assets/images/Screenshot from 2020-11-30 11-35-39.png">
 
-<img width=300 src="./src/assets/images/Screenshot from 2020-11-30 11-35-47.png">
+<img width=400 src="./src/assets/images/Screenshot from 2020-11-30 11-35-47.png">
 
 [Demo del Proyecto](https://oriananohemi.github.io/legal-hackaton-ransa/auth)
 
@@ -23,7 +23,6 @@ Para ingresar puedes ingresar al demo con el correo: *jefe1@ransa.com* con la co
 
 ### Equipo
 
-<div style="display: flex">
 <figure>
 <img width=200 src="./src/assets/images/dulce.jpeg">
 
@@ -53,9 +52,9 @@ Para ingresar puedes ingresar al demo con el correo: *jefe1@ransa.com* con la co
 </figcaption>
 </figure>
 
-</div>
+
 ### Proyecto realizado para Legal Hackaton - Laboratoria 2020
 
 <p align="center">
-  <img width=80% src="./src/assets/images/legal-hackaton-logo.png">
+  <img width=60% src="./src/assets/images/legal-hackaton-logo.png">
 </p>
