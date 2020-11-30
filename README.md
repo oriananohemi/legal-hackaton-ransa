@@ -48,7 +48,7 @@ Para ingresar puedes ingresar al demo con el correo: *jefe1@ransa.com* con la co
 <img width=200 src="./src/assets/images/leslie.jpeg">
 
 <figcaption>
-  <a href="https://www.linkedin.com/in/lesliebenel/">Leslie Bernel</a>
+  <a href="https://www.linkedin.com/in/lesliebenel/">Leslie Benel</a>
 </figcaption>
 </figure>
 
