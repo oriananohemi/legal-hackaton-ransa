@@ -26,24 +26,28 @@ Para ingresar puedes ingresar al demo con el correo: *jefe1@ransa.com* con la co
 <div style="display: flex">
 <figure>
 <img width=200 src="./src/assets/images/dulce.jpeg">
+
 <figcaption>
   <a href="https://github.com/soydulceangelina">Dulce Mercado</a>
 </figcaption>
 </figure>
 <figure>
 <img width=200 src="./src/assets/images/milagros.jpeg">
+
 <figcaption>
   <a href="https://github.com/MilagrosRn">Milagros Rodriguez</a>
 </figcaption>
 </figure>
 <figure>
 <img width=200 src="./src/assets/images/oriana.jpeg">
+
 <figcaption>
   <a href="https://github.com/oriananohemi">Oriana Reina</a>
 </figcaption>
 </figure>
 <figure>
 <img width=200 src="./src/assets/images/leslie.jpeg">
+
 <figcaption>
   <a href="https://www.linkedin.com/in/lesliebenel/">Leslie Bernel</a>
 </figcaption>
