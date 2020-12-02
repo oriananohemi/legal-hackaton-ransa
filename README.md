@@ -17,9 +17,13 @@ Crear una plataforma virtual, enfocada en la operación (supervisores y jefes) q
 
 <img width=400 src="./src/assets/images/Screenshot from 2020-11-30 11-35-47.png">
 
+[Prototipo en Figma](https://www.figma.com/file/6kxRYC7E3lGXMXpl9DUzL6/RANSA?node-id=106%3A207)
+
 [Demo del Proyecto](https://oriananohemi.github.io/legal-hackaton-ransa/auth)
 
-Ingresa a la plataforma con el correo: *jefe1@ransa.com* con la contraseña: _123456789_
+Ingresa a la plataforma como supervisor utilizando el correo: *jefe1@ransa.com* con la contraseña: _123456789_
+
+Ingresa a la plataforma como personal de Gestion Humana utilizando el correo: *laboral1@ransa.com* con contraseña: _123456789_
 
 ### Equipo
 
