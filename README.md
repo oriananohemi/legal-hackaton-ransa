@@ -21,9 +21,9 @@ Crear una plataforma virtual, enfocada en la operación (supervisores y jefes) q
 
 [Demo del Proyecto](https://oriananohemi.github.io/legal-hackaton-ransa/auth)
 
-Ingresa a la plataforma como supervisor utilizando el correo: *jefe1@ransa.com* con la contraseña: _123456789_
+Ingresa a la plataforma como *Supervisor* utilizando el correo: *jefe1@ransa.com* con la contraseña: _123456789_
 
-Ingresa a la plataforma como personal de Gestion Humana utilizando el correo: *laboral1@ransa.com* con contraseña: _123456789_
+Ingresa a la plataforma como personal de *Gestion Humana* utilizando el correo: *laboral1@ransa.com* con contraseña: _123456789_
 
 ### Equipo
 
